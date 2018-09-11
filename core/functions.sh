@@ -23,7 +23,7 @@ clean() {
     step=$2
     
     echo ""
-    if test -z "$var"; then
+    if test -z "${step}"; then
         echo "${bcyan}${title}"
     else
         echo "${bcyan}${title} ${dim}(Step: ${step} of ${totalSteps})"
