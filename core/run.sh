@@ -26,6 +26,7 @@ fi
 @@ "Please enter your admin password"
 
 # Keep-alive sudo time stamp until finished
+sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################
