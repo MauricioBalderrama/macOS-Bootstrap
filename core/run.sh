@@ -66,7 +66,7 @@ sudo softwareupdate -i -a
 
 _ "Running system configuration for macOS ${macOSName} ${macOSVersion}"
 curl -O "https://raw.githubusercontent.com/${gitHubUsername}/.macOS/master/.macos"
-source .macos.sh
+source core/.macos.sh
 
 ###############################################################
 @ "SSH" 6
