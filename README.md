@@ -1,7 +1,8 @@
-# OSX Bootstrap
-Everything I need after installing a fresh macOS.
-<small>**Warning:** If you want to give these script a try, you should first **fork this repository, review and understand the code.</small>
-<small>Don’t blindly use my settings unless you know what that entails. Use at your own risk!</small>
+# macOS Bootstrap
+Everything I need after installing a fresh macOS.<br>
+<br>
+**Warning:** If you want to give these script a try, you should first **fork this repository, review and understand the code.<br>
+Don’t blindly use it unless you know what that entails.<br>
 
 ## Prerequisites
 Install XCode from the AppStore before running the script. Otherwise, Homebrew can't access the Xcode libraries as the agreement hasn't been accepted yet.
