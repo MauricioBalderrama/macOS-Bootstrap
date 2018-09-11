@@ -101,7 +101,7 @@ if [[ $? != 0 ]]; then
 	    read -p "" yesOrNo
 	    case $yesOrNo in
 	        [Yy]* ) _ "System is rebooting..."; sleep 3; reboot; break;;
-	        [Nn]* ) stopsudo; _e "System needs to reboot to complete the installation"; exit;;
+	        [Nn]* ) _e "System needs to reboot to complete the installation"; exit;;
 	        * ) _ "Please answer y or n";;
 	    esac
 	done
