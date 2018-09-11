@@ -9,7 +9,7 @@ Install XCode from the AppStore before running the script. Otherwise, Homebrew c
 
 ## Installation
 ``` 
-bash <(curl -L https://raw.github.com/MauricioBalderrama/OSX-Bootstrap/master/install.sh)
+bash <(curl -L https://raw.github.com/MauricioBalderrama/macOS-Bootstrap/master/install.sh)
 ```
 ## Manual Installation
 Some apps I want to install by hand. For personal reasons.<br>
