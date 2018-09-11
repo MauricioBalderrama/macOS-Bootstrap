@@ -92,7 +92,7 @@ read -r -n 1
 
 _ "macOS Bootstrap installation has completed"
 
-@@ "Do you want to reboot now?"
+@@ "Do you want to reboot now? (y/n)"
 
 # reboot
 `sudo fdesetup isactive`
