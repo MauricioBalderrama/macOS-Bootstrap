@@ -1,0 +1,124 @@
+#!/bin/bash
+
+# github username
+gitHubUsername=MauricioBalderrama
+
+# formulas
+formulas=(
+    bash
+    bash-completion
+
+    cask
+    
+    curl
+    wget
+
+    mackup
+    
+    nodejs
+    python
+
+    aws-shell
+    awscli
+    
+    git
+    hub
+    git-crypt
+    colordiff
+
+    coreutils
+    findutils
+)
+
+#fonts
+fonts=(
+    font-roboto
+    font-clear-sans
+)
+
+# casks
+casks=(
+	#browsers
+	google-chrome
+	firefox
+	torbrowser
+	homebrew/cask-versions/google-chrome-canary
+
+	# code related
+	visual-studio-code
+    # sublime-text
+    iterm2
+
+	# utilities
+	hyperdock
+	sketchup
+    # filezilla # fails
+	sourcetree
+	qbittorrent
+    # dropbox
+    # google-drive
+
+	# servers & virtualization
+	xampp
+	# docker
+	# vagrant
+	# virtualbox
+
+	# chat & collaboration
+	whatsapp
+	teamviewer
+	skype
+
+	# players
+	vlc
+	spotify
+
+	# system hacks
+	appcleaner
+	flux
+	keepingyouawake
+	spotifree
+)
+
+# dock (`space` means a blank space in the dock)
+dock=(
+	Launchpad
+	Siri
+	System\ Preferences
+	App\ Store
+	Calendar
+	space
+
+	WhatsApp
+	TeamViewer
+	Skype
+	space
+
+	torBrowser
+	Firefox
+	Safari
+	Google\ Chrome\ Canary
+	Google\ Chrome
+	space
+
+	Visual\ Studio\ Code
+	iTerm
+	Utilities/Terminal
+	space
+
+	FileZilla
+	SourceTree
+	# Dropbox
+	# Google\ Drive
+	space
+
+	XAMPP/xamppfiles/manager-osx #xampp
+    # Docker
+    # Vagrant
+    # VirtualBox
+    space
+
+    Spotify
+    VLC
+	qBittorrent    
+)
