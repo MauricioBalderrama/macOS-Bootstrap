@@ -76,11 +76,15 @@ source .macos.sh
 _ "Checking for SSH key, generating one if it doesn't exist..."
 [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
 
-# copy & paste ssh key to github
+# copy & paste ssh key to GitHub
 _ "Copying public key to clipboard..."
 _ "Paste it into your Github account..."
 [[ -f ~/.ssh/id_rsa.pub ]] && pbcopy < ~/.ssh/id_rsa.pub
 open https://github.com/account/ssh
+
+# confirm user has pasted the ssy key to GitHub
+@@ "Have you pasted the ssh key (already in your clipboard) to GitHub? (Y)"
+read -r -n 1
 
 ###############################################################
 @ "Reboot" 7
