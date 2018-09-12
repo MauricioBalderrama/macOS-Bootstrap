@@ -5,7 +5,7 @@ Everything I need after installing a fresh macOS.<br>
 Don’t blindly use it unless you know what that entails.<br>
 
 ## Prerequisites
-Install XCode from the AppStore before running the script. Otherwise, Homebrew can't access the Xcode libraries as the agreement hasn't been accepted yet.
+Install XCode from the AppStore before running the script. Otherwise, Homebrew can't access the Xcode libraries as the agreement hasn't been accepted yet. Download link: https://developer.apple.com/download/more/ 
 
 ## Installation
 ``` 
