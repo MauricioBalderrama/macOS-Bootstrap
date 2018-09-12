@@ -38,81 +38,81 @@ fonts=(
 
 # casks
 casks=(
-	#browsers
-	google-chrome
-	firefox
-	torbrowser
-	homebrew/cask-versions/google-chrome-canary
+    #browsers
+    google-chrome
+    firefox
+    torbrowser
+    homebrew/cask-versions/google-chrome-canary
 
-	# code related
-	visual-studio-code
+    # code related
+    visual-studio-code
     # sublime-text
     iterm2
 
-	# utilities
-	hyperdock
-	sketchup
+    # utilities
+    hyperdock
+    sketchup
     # filezilla # fails
-	sourcetree
-	qbittorrent
+    sourcetree
+    qbittorrent
     # dropbox
     # google-drive
 
-	# servers & virtualization
-	xampp
-	# docker
-	# vagrant
-	# virtualbox
+    # servers & virtualization
+    xampp
+    # docker
+    # vagrant
+    # virtualbox
 
-	# chat & collaboration
-	whatsapp
-	teamviewer
-	skype
+    # chat & collaboration
+    whatsapp
+    teamviewer
+    skype
 
-	# players
-	vlc
-	spotify
+    # players
+    vlc
+    spotify
 
-	# system hacks
-	appcleaner
-	flux
-	keepingyouawake
-	spotifree
+    # system hacks
+    appcleaner
+    flux
+    keepingyouawake
+    spotifree
 )
 
 # dock (`space` means a blank space in the dock)
 dock=(
-	Launchpad
-	Siri
-	System\ Preferences
-	App\ Store
-	Calendar
-	space
+    Launchpad
+    Siri
+    System\ Preferences
+    App\ Store
+    Calendar
+    space
 
-	WhatsApp
-	TeamViewer
-	Skype
-	space
+    WhatsApp
+    TeamViewer
+    Skype
+    space
 
-	torBrowser
-	Firefox
-	Safari
-	Google\ Chrome\ Canary
-	Google\ Chrome
-	space
+    torBrowser
+    Firefox
+    Safari
+    Google\ Chrome\ Canary
+    Google\ Chrome
+    space
 
-	Visual\ Studio\ Code
-	iTerm
-	Utilities/Terminal
-	space
+    Visual\ Studio\ Code
+    iTerm
+    Utilities/Terminal
+    space
 
-	FileZilla
-	SourceTree
-	# Dropbox
-	# Google\ Drive
-	space
+    FileZilla
+    SourceTree
+    # Dropbox
+    # Google\ Drive
+    space
 
-	XAMPP/xamppfiles/manager-osx #xampp
+    XAMPP/xamppfiles/manager-osx #xampp
     # Docker
     # Vagrant
     # VirtualBox
@@ -120,5 +120,5 @@ dock=(
 
     Spotify
     VLC
-	qBittorrent    
+    qBittorrent    
 )
