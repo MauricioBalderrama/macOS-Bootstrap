@@ -2,9 +2,9 @@
 
 @ "Xcode" 1
 
-_ "Xcode is ~5.3 Gb."
+_ "Xcode is ~4.9 Gb."
 _ "It is recommended you have it installed and updated."
-_ "Xcode can be downloaded from the AppStore"
+_ "Xcode can be downloaded from: https://developer.apple.com/download/more/"
 
 @@ "Do you want to continue? (Y/n)"
 read -r -n 1
