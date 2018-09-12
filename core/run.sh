@@ -47,6 +47,9 @@ fi
 _ "Installing Homebrew formulas..."
 brew install ${formulas[@]}
 
+_ "Updating Homebrew formulas..."
+brew upgrade
+
 _ "Installing Homebrew fonts..."
 brew tap caskroom/fonts
 brew cask install ${fonts[@]}
