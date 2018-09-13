@@ -97,7 +97,7 @@ dock=(
     Skype
     space
 
-    torBrowser
+    Tor\ Browser
     Firefox
     Safari
     Google\ Chrome\ Canary
