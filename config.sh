@@ -44,7 +44,7 @@ casks=(
     #browsers
     google-chrome
     firefox
-    torbrowser
+    tor-browser
     homebrew/cask-versions/google-chrome-canary
 
     # code related
