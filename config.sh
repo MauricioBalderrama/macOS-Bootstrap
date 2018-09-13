@@ -3,6 +3,9 @@
 # github username
 gitHubUsername=MauricioBalderrama
 
+# work folder
+workFolder=Workspace
+
 # formulas
 formulas=(
     bash
