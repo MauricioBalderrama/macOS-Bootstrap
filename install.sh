@@ -20,6 +20,7 @@ else
 fi
 
 # update remote to use SSH
+cd ${source_dir}
 git remote rm origin
 git remote add origin git@github.com:${gitHubUsername}/${gitHubRepository}
 
