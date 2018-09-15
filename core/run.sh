@@ -44,6 +44,9 @@ else
     brew doctor
 fi
 
+_ "Set Hombrew cache location: ${homebrewCache}..."
+export HOMEBREW_CACHE=${homebrewCache}
+
 _ "Installing Homebrew formulas..."
 brew install ${formulas[@]}
 
