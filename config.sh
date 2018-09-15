@@ -6,6 +6,9 @@ gitHubUsername=MauricioBalderrama
 # work folder
 workFolder=Workspace
 
+# Set HOMEBREW_CACHE to use a different location
+homebrewCache=/Users/mauricio/Homebrew
+
 # formulas
 formulas=(
     bash
