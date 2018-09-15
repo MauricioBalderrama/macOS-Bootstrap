@@ -30,7 +30,25 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################
-@ "Homebrew" 3
+@ "SSH" 3
+###############################################################
+
+# generate ssh key
+_ "Checking for SSH key, generating one if it doesn't exist..."
+[[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
+
+# copy & paste ssh key to GitHub
+_ "Copying public key to clipboard..."
+_ "Paste it into your Github account..."
+[[ -f ~/.ssh/id_rsa.pub ]] && pbcopy < ~/.ssh/id_rsa.pub
+open https://github.com/account/ssh
+
+# confirm user has pasted the ssy key to GitHub
+@@ "Have you pasted the ssh key (already in your clipboard) to GitHub? (Y)"
+read -r -n 1
+
+###############################################################
+@ "Homebrew" 4
 ###############################################################
 
 # install/update homebrew
@@ -61,37 +79,19 @@ _ "Installing Homebrew casks..."
 brew cask install ${casks[@]} 
 
 ###############################################################
-@ "Update" 4
+@ "Update" 5
 ###############################################################
 
 _ "Running macOS software updates..."
 sudo softwareupdate -i -a
 
 ###############################################################
-@ "System Configuration" 5
+@ "System Configuration" 6
 ###############################################################
 
 _ "Running system configuration for macOS ${macOSName} ${macOSVersion}"
 curl -O "https://raw.githubusercontent.com/${gitHubUsername}/.macOS/master/.macos"
 source .macos
-
-###############################################################
-@ "SSH" 6
-###############################################################
-
-# generate ssh key
-_ "Checking for SSH key, generating one if it doesn't exist..."
-[[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
-
-# copy & paste ssh key to GitHub
-_ "Copying public key to clipboard..."
-_ "Paste it into your Github account..."
-[[ -f ~/.ssh/id_rsa.pub ]] && pbcopy < ~/.ssh/id_rsa.pub
-open https://github.com/account/ssh
-
-# confirm user has pasted the ssy key to GitHub
-@@ "Have you pasted the ssh key (already in your clipboard) to GitHub? (Y)"
-read -r -n 1
 
 ###############################################################
 @ "Reboot" 7
