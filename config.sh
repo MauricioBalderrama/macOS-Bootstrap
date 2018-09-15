@@ -6,8 +6,8 @@ gitHubUsername=MauricioBalderrama
 # work folder
 workFolder=Workspace
 
-# Set HOMEBREW_CACHE to use a different location
-homebrewCache=/Users/mauricio/Homebrew
+# Set HOMEBREW_CACHE to use a different download and storage location
+homebrewCache=/Volumes/Installers/Homebrew
 
 # formulas
 formulas=(
@@ -52,8 +52,9 @@ casks=(
 
     # code related
     visual-studio-code
+    hyper
     # sublime-text
-    iterm2
+    # iterm2
 
     # utilities
     hyperdock
@@ -108,8 +109,9 @@ dock=(
     space
 
     Visual\ Studio\ Code
-    iTerm
-    Utilities/Terminal
+    Hyper
+    # iTerm
+    # Utilities/Terminal
     space
 
     FileZilla
