@@ -3,6 +3,7 @@
 # variables
 declare source_dir=~/macOS-Bootstrap
 declare gitHubUsername=MauricioBalderrama
+declare gitHubRepository=macOS-Bootstrap
 
 # download repository
 if [[ ! -d ${source_dir} ]]; then
@@ -17,6 +18,10 @@ else
     cd $source_dir
     git pull origin master
 fi
+
+# update remote to use SSH
+git remote rm origin
+git remote add origin git@github.com:${gitHubUsername}/${gitHubRepository}
 
 # run
 cd ${source_dir}/core
