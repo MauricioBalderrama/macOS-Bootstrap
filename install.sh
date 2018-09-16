@@ -23,6 +23,7 @@ fi
 cd ${cloneFolder}
 git remote rm origin
 git remote add origin git@github.com:${gitHubUsername}/${gitHubRepository}
+git push --set-upstream origin master
 
 # run
 cd ${cloneFolder}/core
