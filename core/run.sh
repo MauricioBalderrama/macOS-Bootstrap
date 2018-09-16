@@ -54,9 +54,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 @ "Homebrew" 4
 ###############################################################
 
-_ "Set Hombrew cache location: ${homebrewCache}..."
-export HOMEBREW_CACHE=${homebrewCache} # export HOMEBREW_CACHE=/Volumes/Installers/Homebrew
-
 # install/update homebrew
 if test ! $(which brew); then
     _ "Installing Homebrew..."
