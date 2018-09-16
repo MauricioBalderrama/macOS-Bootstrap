@@ -68,6 +68,9 @@ else
 	brew prune
 fi
 
+_ "Set Hombrew cache location: ${homebrewCache}..."
+export HOMEBREW_CACHE=${homebrewCache} # export HOMEBREW_CACHE=/Volumes/Installers/Homebrew
+
 _ "Installing Homebrew formulas..."
 brew install ${formulas[@]}
 
