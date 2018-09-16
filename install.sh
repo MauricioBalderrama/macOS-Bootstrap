@@ -1,29 +1,29 @@
 #!/bin/bash
 
 # variables
-declare source_dir=~/macOS-Bootstrap
+declare cloneFolder=~/macOS-Bootstrap
 declare gitHubUsername=MauricioBalderrama
 declare gitHubRepository=macOS-Bootstrap
 
 # download repository
-if [[ ! -d ${source_dir} ]]; then
+if [[ ! -d ${cloneFolder} ]]; then
     # clone
     echo ""
     echo "Downloading OSX Bootstrap..."
-    git clone https://github.com/${gitHubUsername}/macOS-Bootstrap.git ${source_dir}
+    git clone https://github.com/${gitHubUsername}/macOS-Bootstrap.git ${cloneFolder}
 else
     # update
     echo ""
     echo "Updating OSX Bootstrap..."
-    cd $source_dir
+    cd $cloneFolder
     git pull origin master
 fi
 
 # update remote to use SSH
-cd ${source_dir}
+cd ${cloneFolder}
 git remote rm origin
 git remote add origin git@github.com:${gitHubUsername}/${gitHubRepository}
 
 # run
-cd ${source_dir}/core
+cd ${cloneFolder}/core
 source run.sh
