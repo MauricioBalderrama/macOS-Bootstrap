@@ -5,6 +5,9 @@
 . settings.sh
 . functions.sh
 
+# Prevent computer from sleeping
+sudo caffeinate &
+
 ###############################################################
 @ "Xcode" 1
 ###############################################################
@@ -96,6 +99,9 @@ source .macos
 ###############################################################
 @ "Reboot" 7
 ###############################################################
+
+# Stop Caffeinate (allow computer to sleep)
+killall caffeinate
 
 _ "macOS Bootstrap installation has completed"
 
