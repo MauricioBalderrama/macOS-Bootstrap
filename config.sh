@@ -10,7 +10,7 @@ workFolder=Workspace
 homebrewCache=/Volumes/Installers/Homebrew
 
 # Mac configuration repository name at GitHub
-macConfigurationGitHubRepositoryName=macOS-Hacks
+configurationGitHubRepositoryName=macOS-Hacks
 
 # formulas
 formulas=(
