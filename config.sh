@@ -9,6 +9,9 @@ workFolder=Workspace
 # Set HOMEBREW_CACHE to use a different download and storage location
 homebrewCache=/Volumes/Installers/Homebrew
 
+# Mac configuration repository name at GitHub
+macConfigurationGitHubRepositoryName=macOS-Hacks
+
 # formulas
 formulas=(
     bash
