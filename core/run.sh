@@ -22,6 +22,24 @@ if [[ $REPLY =~ ^[Nn]$ ]]; then
     exit 1
 fi
 
+# ###############################################################
+# @ "SSH" 2
+# ###############################################################
+
+# # generate ssh key
+# _ "Checking for SSH key, generating one if it doesn't exist..."
+# [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
+
+# # copy & paste ssh key to GitHub
+# _ "Copying public key to clipboard..."
+# _ "Paste it into your Github account..."
+# [[ -f ~/.ssh/id_rsa.pub ]] && pbcopy < ~/.ssh/id_rsa.pub
+# open https://github.com/account/ssh
+
+# # confirm user has pasted the ssy key to GitHub
+# @@ "Have you pasted the ssh key (already in your clipboard) to GitHub? (Y)"
+# read -r -n 1
+
 ###############################################################
 @ "Sudo" 3
 ###############################################################
@@ -33,7 +51,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################
-@ "SSH" 3
+@ "Homebrew" 4
 ###############################################################
 
 _ "Set Hombrew cache location: ${homebrewCache}..."
@@ -46,11 +64,9 @@ if test ! $(which brew); then
 else
     _ "Updating Homebrew..."
     brew update #--debug --verbose
+	brew upgrade
 	brew prune
 fi
-
-_ "Set Hombrew cache location: ${homebrewCache}..."
-export HOMEBREW_CACHE=${homebrewCache} # export HOMEBREW_CACHE=/Volumes/Installers/Homebrew
 
 _ "Installing Homebrew formulas..."
 brew install ${formulas[@]}
@@ -61,7 +77,7 @@ brew cask install ${fonts[@]}
 
 _ "Installing Homebrew casks..."
 brew cask install ${casks[@]} 
-
+exit 
 ###############################################################
 @ "Update" 5
 ###############################################################
