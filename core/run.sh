@@ -36,23 +36,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 @ "SSH" 3
 ###############################################################
 
-# generate ssh key
-_ "Checking for SSH key, generating one if it doesn't exist..."
-[[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
-
-# copy & paste ssh key to GitHub
-_ "Copying public key to clipboard..."
-_ "Paste it into your Github account..."
-[[ -f ~/.ssh/id_rsa.pub ]] && pbcopy < ~/.ssh/id_rsa.pub
-open https://github.com/account/ssh
-
-# confirm user has pasted the ssy key to GitHub
-@@ "Have you pasted the ssh key (already in your clipboard) to GitHub? (Y)"
-read -r -n 1
-
-###############################################################
-@ "Homebrew" 4
-###############################################################
+_ "Set Hombrew cache location: ${homebrewCache}..."
+export HOMEBREW_CACHE=${homebrewCache} # export HOMEBREW_CACHE=/Volumes/Installers/Homebrew
 
 # install/update homebrew
 if test ! $(which brew); then
@@ -62,7 +47,6 @@ else
     _ "Updating Homebrew..."
     brew update #--debug --verbose
 	brew prune
-    brew doctor
 fi
 
 _ "Set Hombrew cache location: ${homebrewCache}..."
@@ -70,9 +54,6 @@ export HOMEBREW_CACHE=${homebrewCache} # export HOMEBREW_CACHE=/Volumes/Installe
 
 _ "Installing Homebrew formulas..."
 brew install ${formulas[@]}
-
-_ "Updating Homebrew formulas..."
-brew upgrade
 
 _ "Installing Homebrew fonts..."
 brew tap caskroom/fonts
