@@ -20,6 +20,8 @@ formulas=(
     bash
     bash-completion
 
+    zsh
+
     cask
     
     curl

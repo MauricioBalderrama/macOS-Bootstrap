@@ -90,14 +90,14 @@ sudo caffeinate &
 ###############################################################
 
 _ "Running system configuration (${configurationGitHubRepositoryName}) for macOS ${macOSName} ${macOSVersion}"
-bash <(curl -L https://raw.github.com/${gitHubUsername}/${configurationGitHubRepositoryName}/master/install)
+bash <(curl -L https://raw.githubusercontent.com/${gitHubUsername}/${configurationGitHubRepositoryName}/master/install)
 
 ###############################################################
 @ "Dotfiles Configuration" 6
 ###############################################################
 
 _ "Running dotfiles configuration (${dotfilesGitHubRepositoryName})"
-bash <(curl -L https://raw.github.com/${gitHubUsername}/${dotfilesGitHubRepositoryName}/master/install)
+bash <(curl -L https://raw.githubusercontent.com/${gitHubUsername}/${dotfilesGitHubRepositoryName}/master/install)
 
 ###############################################################
 @ "Apps Configuration" 7
