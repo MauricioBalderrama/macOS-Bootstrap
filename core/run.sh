@@ -100,6 +100,23 @@ _ "Running dotfiles configuration (${dotfilesGitHubRepositoryName})"
 bash <(curl -L https://raw.githubusercontent.com/${gitHubUsername}/${dotfilesGitHubRepositoryName}/master/install)
 
 ###############################################################
+@ "Oh My Zsh" 7
+###############################################################
+
+# Use the zsh that brew installed
+sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Install Pure theme
+sudo npm install --global pure-prompt --allow-root --unsafe-perm=true
+
+# Initialize the prompt system (if not so already) and choose pure
+autoload -U promptinit; promptinit
+prompt pure
+
+###############################################################
 @ "Apps Configuration" 7
 ###############################################################
 exit

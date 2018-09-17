@@ -21,6 +21,8 @@ formulas=(
     bash-completion
 
     zsh
+    zsh-autosuggestions
+    zsh-completions
 
     cask
     
@@ -29,7 +31,7 @@ formulas=(
 
     mackup
     
-    nodejs
+    node
     python
 
     aws-shell
@@ -46,6 +48,7 @@ formulas=(
 
 #fonts
 fonts=(
+    font-fira-code
     font-roboto
     font-clear-sans
 )
