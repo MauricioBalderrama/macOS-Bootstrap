@@ -9,15 +9,15 @@
 @ "Xcode" 1
 ###############################################################
 
-_ "Xcode is ~5.3 Gb."
-_ "It is recommended you have it installed and updated."
-_ "Xcode can be downloaded from the AppStore or from: https://developer.apple.com/download/more/ "
+# _ "Xcode is ~5.3 Gb."
+# _ "It is recommended you have it installed and updated."
+# _ "Xcode can be downloaded from the AppStore or from: https://developer.apple.com/download/more/ "
 
-@@ "Do you want to continue? (Y/n)"
-read -r -n 1
-if [[ $REPLY =~ ^[Nn]$ ]]; then
-    exit 1
-fi
+# @@ "Do you want to continue? (Y/n)"
+# read -r -n 1
+# if [[ $REPLY =~ ^[Nn]$ ]]; then
+#     exit 1
+# fi
 
 ###############################################################
 @ "SSH" 2
@@ -92,7 +92,6 @@ sudo caffeinate &
 _ "Running system configuration (${configurationGitHubRepositoryName}) for macOS ${macOSName} ${macOSVersion}"
 bash <(curl -L https://raw.github.com/${gitHubUsername}/${configurationGitHubRepositoryName}/master/install)
 
-
 ###############################################################
 @ "Apps Configuration" 7
 ###############################################################
@@ -101,7 +100,7 @@ _ "Running applications configuration"
 source . core/apps
 
 ###############################################################
-@ "Workspace Folder Configuration" 8
+@ "Filesystem Configuration" 8
 ###############################################################
 
 # Hide unused folders on ~
@@ -146,7 +145,7 @@ killall Dock
 ###############################################################
 
 # Stop Caffeinate (allow computer to sleep)
-killall caffeinate
+sudo killall caffeinate
 
 _ "macOS Bootstrap installation has completed"
 
@@ -158,7 +157,7 @@ if [[ $? != 0 ]]; then
 	while true; do
 	    read -p "" yesOrNo
 	    case $yesOrNo in
-	        [Yy]* ) _ "System is rebooting..."; sleep 3; reboot; break;;
+	        [Yy]* ) _ "System is rebooting..."; sleep 3; sudo reboot; break;;
 	        [Nn]* ) _e "System needs to reboot to complete the installation"; exit;;
 	        * ) _ "Please answer y or n";;
 	    esac
