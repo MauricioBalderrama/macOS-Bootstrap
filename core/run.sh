@@ -93,9 +93,16 @@ _ "Running system configuration (${configurationGitHubRepositoryName}) for macOS
 bash <(curl -L https://raw.github.com/${gitHubUsername}/${configurationGitHubRepositoryName}/master/install)
 
 ###############################################################
-@ "Apps Configuration" 7
+@ "Dotfiles Configuration" 6
 ###############################################################
 
+_ "Running dotfiles configuration (${dotfilesGitHubRepositoryName})"
+bash <(curl -L https://raw.github.com/${gitHubUsername}/${dotfilesGitHubRepositoryName}/master/install)
+
+###############################################################
+@ "Apps Configuration" 7
+###############################################################
+exit
 _ "Running applications configuration"
 source . core/apps
 
