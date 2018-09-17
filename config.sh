@@ -76,26 +76,26 @@ casks=(
     # dropbox
     # google-drive
 
-    # servers & virtualization
-    xampp
-    # docker
-    # vagrant
-    # virtualbox
-
     # chat & collaboration
     whatsapp
     teamviewer
     skype
-
-    # players
-    vlc
-    spotify
 
     # system hacks
     appcleaner
     flux
     keepingyouawake
     spotifree
+
+    # players
+    vlc
+    spotify
+
+    # servers & virtualization
+    xampp
+    # docker
+    # vagrant
+    # virtualbox
 )
 
 # dock (`space` means a blank space in the dock)
