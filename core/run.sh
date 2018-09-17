@@ -9,33 +9,33 @@
 @ "Xcode" 1
 ###############################################################
 
-# _ "Xcode is ~5.3 Gb."
-# _ "It is recommended you have it installed and updated."
-# _ "Xcode can be downloaded from the AppStore or from: https://developer.apple.com/download/more/ "
+_ "Xcode is ~5.3 Gb."
+_ "It is recommended you have it installed and updated."
+_ "Xcode can be downloaded from the AppStore or from: https://developer.apple.com/download/more/ "
 
-# @@ "Do you want to continue? (Y/n)"
-# read -r -n 1
-# if [[ $REPLY =~ ^[Nn]$ ]]; then
-#     exit 1
-# fi
+@@ "Do you want to continue? (Y/n)"
+read -r -n 1
+if [[ $REPLY =~ ^[Nn]$ ]]; then
+    exit 1
+fi
 
 ###############################################################
 @ "SSH" 2
 ###############################################################
 
-# # generate ssh key
-# _ "Checking for SSH key, generating one if it doesn't exist..."
-# [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
+# generate ssh key
+_ "Checking for SSH key, generating one if it doesn't exist..."
+[[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
 
-# # copy & paste ssh key to GitHub
-# _ "Copying public key to clipboard..."
-# _ "Paste it into your Github account..."
-# [[ -f ~/.ssh/id_rsa.pub ]] && pbcopy < ~/.ssh/id_rsa.pub
-# open https://github.com/account/ssh
+# copy & paste ssh key to GitHub
+_ "Copying public key to clipboard..."
+_ "Paste it into your Github account..."
+[[ -f ~/.ssh/id_rsa.pub ]] && pbcopy < ~/.ssh/id_rsa.pub
+open https://github.com/account/ssh
 
-# # confirm user has pasted the ssy key to GitHub
-# @@ "Have you pasted the ssh key (already in your clipboard) to GitHub? (Y)"
-# read -r -n 1
+# confirm user has pasted the ssy key to GitHub
+@@ "Have you pasted the ssh key (already in your clipboard) to GitHub? (Y)"
+read -r -n 1
 
 ###############################################################
 @ "Sudo" 3
@@ -54,36 +54,36 @@ sudo caffeinate &
 @ "Homebrew" 4
 ###############################################################
 
-# # install/update homebrew
-# if test ! $(which brew); then
-#     _ "Installing Homebrew..."
-#     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-# else
-#     _ "Updating Homebrew..."
-#     brew update #--debug --verbose
-# 	brew upgrade
-# 	brew prune
-# fi
+# install/update homebrew
+if test ! $(which brew); then
+    _ "Installing Homebrew..."
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+    _ "Updating Homebrew..."
+    brew update #--debug --verbose
+	brew upgrade
+	brew prune
+fi
 
-# _ "Set Hombrew cache location: ${homebrewCache}..."
-# export HOMEBREW_CACHE=${homebrewCache} # export HOMEBREW_CACHE=/Volumes/Installers/Homebrew
+_ "Set Hombrew cache location: ${homebrewCache}..."
+export HOMEBREW_CACHE=${homebrewCache} # export HOMEBREW_CACHE=/Volumes/Installers/Homebrew
 
-# _ "Installing Homebrew formulas..."
-# brew install ${formulas[@]}
+_ "Installing Homebrew formulas..."
+brew install ${formulas[@]}
 
-# _ "Installing Homebrew fonts..."
-# brew tap caskroom/fonts
-# brew cask install ${fonts[@]}
+_ "Installing Homebrew fonts..."
+brew tap caskroom/fonts
+brew cask install ${fonts[@]}
 
-# _ "Installing Homebrew casks..."
-# brew cask install ${casks[@]} 
+_ "Installing Homebrew casks..."
+brew cask install ${casks[@]} 
 
 ###############################################################
 @ "Update" 5
 ###############################################################
 
-# _ "Running macOS software updates..."
-# sudo softwareupdate -i -a
+_ "Running macOS software updates..."
+sudo softwareupdate -i -a
 
 ###############################################################
 @ "System Configuration" 6
@@ -106,15 +106,11 @@ bash <(curl -L https://raw.githubusercontent.com/${gitHubUsername}/${dotfilesGit
 # Use the zsh that brew installed
 sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 
-# Install oh-my-zsh
+# # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Install Pure theme
-sudo npm install --global pure-prompt --allow-root --unsafe-perm=true
-
-# Initialize the prompt system (if not so already) and choose pure
-autoload -U promptinit; promptinit
-prompt pure
+# # Install Pure theme
+# sudo npm install --global pure-prompt --allow-root --unsafe-perm=true
 
 ###############################################################
 @ "Apps Configuration" 7
