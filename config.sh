@@ -12,7 +12,7 @@ homebrewCache=/Volumes/Installers/Homebrew
 # Mac configuration repository name at GitHub
 configurationGitHubRepositoryName=macOS-Hacks
 
-# Mac configuration repository name at GitHub
+# Dotfiles repository name at GitHub
 dotfilesGitHubRepositoryName=macOS-Dotfiles
 
 # formulas
