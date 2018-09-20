@@ -73,6 +73,9 @@ fi
 _i "Set Hombrew cache location: ${homebrewCache}..."
 export HOMEBREW_CACHE=${homebrewCache} # export HOMEBREW_CACHE=/Volumes/Installers/Homebrew
 
+_i "Homebrew is set to not update"
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 _i "Installing Homebrew formulas..."
 brew install ${formulas[@]}
 
