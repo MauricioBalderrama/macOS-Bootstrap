@@ -25,7 +25,7 @@ fi
 
 # generate ssh key
 _ "Checking for SSH key, generating one if it doesn't exist..."
-[[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
+[[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa -N ""
 
 # copy & paste ssh key to GitHub
 _ "Copying public key to clipboard..."
