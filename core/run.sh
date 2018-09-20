@@ -65,16 +65,16 @@ if test ! $(which brew); then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
     _i "Updating Homebrew..."
-    brew update --debug --verbose
+    brew update --verbose
 	brew upgrade
 	brew prune
+
+    _i "Set Hombrew cache location: ${homebrewCache}..."
+    export HOMEBREW_CACHE=${homebrewCache} # export HOMEBREW_CACHE=/Volumes/Installers/Homebrew
+
+    _i "Homebrew is set to not update"
+    export HOMEBREW_NO_AUTO_UPDATE=1
 fi
-
-_i "Set Hombrew cache location: ${homebrewCache}..."
-export HOMEBREW_CACHE=${homebrewCache} # export HOMEBREW_CACHE=/Volumes/Installers/Homebrew
-
-_i "Homebrew is set to not update"
-export HOMEBREW_NO_AUTO_UPDATE=1
 
 _i "Installing Homebrew formulas..."
 brew install ${formulas[@]}
@@ -85,6 +85,8 @@ brew cask install ${fonts[@]}
 
 _i "Downloading Homebrew casks..."
 for cask in ${casks[@]}; do
+    [[ ${cask} == 'spotify' ]] && continue
+    [[ ${cask} == 'homebrew/cask-versions/google-chrome-canary' ]] && continue
     _s "Downloading:  ${cask}"
     brew cask fetch ${cask}
 done
