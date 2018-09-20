@@ -57,6 +57,11 @@ _s() {
     _ "$1" ${bgreen} "Success: "
 }
 
+# info paragraph p
+_i() {
+    _ "$1" ${cyan} "Info: "
+}
+
 # warning paragraph p
 _w() {
     _ "$1" ${byellow} "Warning: "
@@ -65,4 +70,8 @@ _w() {
 # error paragraph p
 _e() {
     _ "$1" ${bred} "Error: "
+}
+
+renew_sudo() { # helper function for when the following command needs 'sudo' active but shouldn't be called with it
+  sudo -S -v <<< "${sudo_password}" 2> /dev/null
 }

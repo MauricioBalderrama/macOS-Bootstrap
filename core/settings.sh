@@ -7,7 +7,7 @@ declare macOSName="High Sierra"
 declare macOSVersion="10.13"
 
 # number of total steps for this script
-declare totalSteps=7
+declare totalSteps=12
 
 # colors
 declare black=$'\033[0;30m'

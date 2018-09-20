@@ -43,8 +43,13 @@ read -r -n 1
 
 @@ "Please enter your admin password"
 
+until sudo --non-interactive true 2> /dev/null; do # if password is wrong, keep asking
+    read -s -p '' sudo_password
+    echo
+    sudo --stdin --validate <<< "${sudo_password}" 2> /dev/null
+done
+
 # Keep-alive sudo time stamp until finished
-sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Prevent computer from sleeping
@@ -56,33 +61,44 @@ sudo caffeinate &
 
 # install/update homebrew
 if test ! $(which brew); then
-    _ "Installing Homebrew..."
+    _i "Installing Homebrew..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
-    _ "Updating Homebrew..."
-    brew update #--debug --verbose
+    _i "Updating Homebrew..."
+    brew update --debug --verbose
 	brew upgrade
 	brew prune
 fi
 
-_ "Set Hombrew cache location: ${homebrewCache}..."
+_i "Set Hombrew cache location: ${homebrewCache}..."
 export HOMEBREW_CACHE=${homebrewCache} # export HOMEBREW_CACHE=/Volumes/Installers/Homebrew
 
-_ "Installing Homebrew formulas..."
+_i "Installing Homebrew formulas..."
 brew install ${formulas[@]}
 
-_ "Installing Homebrew fonts..."
+_i "Installing Homebrew fonts..."
 brew tap caskroom/fonts
 brew cask install ${fonts[@]}
 
-_ "Installing Homebrew casks..."
-brew cask install ${casks[@]} 
+_i "Downloading Homebrew casks..."
+for cask in ${casks[@]}; do
+    _s "Downloading:  ${cask}"
+    brew cask fetch ${cask}
+done
+
+_i "Installing Homebrew casks..."
+for cask in ${casks[@]}; do
+	renew_sudo
+    _s "Installing:  ${cask}"
+    brew cask install  ${cask}
+done
 
 ###############################################################
 @ "Update" 5
 ###############################################################
 
 _ "Running macOS software updates..."
+renew_sudo
 sudo softwareupdate -i -a
 
 ###############################################################
@@ -93,14 +109,14 @@ _ "Running system configuration (${configurationGitHubRepositoryName}) for macOS
 bash <(curl -L https://raw.githubusercontent.com/${gitHubUsername}/${configurationGitHubRepositoryName}/master/install)
 
 ###############################################################
-@ "Dotfiles Configuration" 6
+@ "Dotfiles Configuration" 7
 ###############################################################
 
 _ "Running dotfiles configuration (${dotfilesGitHubRepositoryName})"
 bash <(curl -L https://raw.githubusercontent.com/${gitHubUsername}/${dotfilesGitHubRepositoryName}/master/install)
 
 ###############################################################
-@ "Oh My Zsh" 7
+@ "Oh My Zsh" 8
 ###############################################################
 
 # Use the zsh that brew installed
@@ -113,14 +129,14 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 # sudo npm install --global pure-prompt --allow-root --unsafe-perm=true
 
 ###############################################################
-@ "Apps Configuration" 7
+@ "Apps Configuration" 9
 ###############################################################
 exit
 _ "Running applications configuration"
 source . core/apps
 
 ###############################################################
-@ "Filesystem Configuration" 8
+@ "Filesystem Configuration" 10
 ###############################################################
 
 # Hide unused folders on ~
@@ -136,7 +152,7 @@ if [ ! -d ~/${workFolder} ]; then
 fi
 
 ###############################################################
-@ "Dock Configuration" 9
+@ "Dock Configuration" 11
 ###############################################################
 
 # Wipe all (default) app icons from the Dock
@@ -161,7 +177,7 @@ sudo rm -rf /Library/Caches/com.apple.iconservices.store
 killall Dock
 
 ###############################################################
-@ "Reboot" 10
+@ "Reboot" 12
 ###############################################################
 
 # Stop Caffeinate (allow computer to sleep)
