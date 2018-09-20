@@ -125,18 +125,15 @@ bash <(curl -L https://raw.githubusercontent.com/${gitHubUsername}/${dotfilesGit
 # Use the zsh that brew installed
 sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 
-# # Install oh-my-zsh
+# Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# # Install Pure theme
-# sudo npm install --global pure-prompt --allow-root --unsafe-perm=true
 
 ###############################################################
 @ "Apps Configuration" 9
 ###############################################################
-exit
+
 _ "Running applications configuration"
-source . core/apps
+# source . core/apps
 
 ###############################################################
 @ "Filesystem Configuration" 10
@@ -148,11 +145,6 @@ sudo chflags hidden ~/Public
 sudo chflags hidden ~/Applications
 sudo chflags hidden ~/Movies
 sudo chflags hidden ~/Music
-
-# create work folder    ##### this one dos not belong here... #######################################################################
-if [ ! -d ~/${workFolder} ]; then
-  mkdir -p ~/${workFolder};
-fi
 
 ###############################################################
 @ "Dock Configuration" 11
