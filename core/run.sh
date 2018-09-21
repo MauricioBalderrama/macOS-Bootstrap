@@ -9,9 +9,9 @@
 @ "Xcode" 1
 ###############################################################
 
-_ "Xcode is ~5.3 Gb."
-_ "It is recommended you have it installed and updated."
-_ "Xcode can be downloaded from the AppStore or from: https://developer.apple.com/download/more/ "
+_i "Xcode is ~5.3 Gb."
+_i "It is recommended you have it installed and updated."
+_i "Xcode can be downloaded from the AppStore or from: https://developer.apple.com/download/more/ "
 
 @@ "Do you want to continue? (Y/n)"
 read -r -n 1
@@ -24,12 +24,12 @@ fi
 ###############################################################
 
 # generate ssh key
-_ "Checking for SSH key, generating one if it doesn't exist..."
+_i "Checking for SSH key, generating one if it doesn't exist..."
 [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -f ~/.ssh/id_rsa -t rsa -N ''
 
 # copy & paste ssh key to GitHub
-_ "Copying public key to clipboard..."
-_ "Paste it into your Github account..."
+_i "Copying public key to clipboard..."
+_i "Paste it into your Github account..."
 [[ -f ~/.ssh/id_rsa.pub ]] && pbcopy < ~/.ssh/id_rsa.pub
 open https://github.com/account/ssh
 
@@ -49,10 +49,10 @@ until sudo --non-interactive true 2> /dev/null; do # if password is wrong, keep 
     sudo --stdin --validate <<< "${sudo_password}" 2> /dev/null
 done
 
-# Keep-alive sudo time stamp until finished
+_i "Keep-alive sudo time stamp until finished"
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Prevent computer from sleeping
+_i "Prevent computer from sleeping (caffeinate)"
 sudo caffeinate -d -i -m -s -u &
 
 ###############################################################
@@ -102,7 +102,7 @@ done
 @ "Update" 5
 ###############################################################
 
-_ "Running macOS software updates..."
+_i "Running macOS software updates..."
 renew_sudo
 sudo softwareupdate -i -a
 
@@ -110,38 +110,28 @@ sudo softwareupdate -i -a
 @ "System Configuration" 6
 ###############################################################
 
-_ "Running system configuration (${configurationGitHubRepositoryName}) for macOS ${macOSName} ${macOSVersion}"
+_i "Running system configuration (${configurationGitHubRepositoryName}) for macOS ${macOSName} ${macOSVersion}"
 bash <(curl -L https://raw.githubusercontent.com/${gitHubUsername}/${configurationGitHubRepositoryName}/master/install)
 
 ###############################################################
 @ "Dotfiles Configuration" 7
 ###############################################################
 
-_ "Running dotfiles configuration (${dotfilesGitHubRepositoryName})"
+_i "Running dotfiles configuration (${dotfilesGitHubRepositoryName})"
 bash <(curl -L https://raw.githubusercontent.com/${gitHubUsername}/${dotfilesGitHubRepositoryName}/master/install)
 
 ###############################################################
-@ "Oh My Zsh" 8
+@ "Apps Configuration" 8
 ###############################################################
 
-# Use the zsh that brew installed
-sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
-
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-###############################################################
-@ "Apps Configuration" 9
-###############################################################
-
-_ "Running applications configuration"
+_i "Running applications configuration"
 # source . core/apps
 
 ###############################################################
-@ "Filesystem Configuration" 10
+@ "Filesystem Configuration" 9
 ###############################################################
 
-# Hide unused folders on ~
+_i "Hide unused folders on ~"
 sudo chflags hidden ~/Pictures
 sudo chflags hidden ~/Public
 sudo chflags hidden ~/Applications
@@ -149,14 +139,13 @@ sudo chflags hidden ~/Movies
 sudo chflags hidden ~/Music
 
 ###############################################################
-@ "Dock Configuration" 11
+@ "Dock Configuration" 10
 ###############################################################
 
-# Wipe all (default) app icons from the Dock
-# This is only really useful when setting up a new Mac, or if you don’t use the Dock to launch apps.
+_i "Wipe all (default) app icons from the Dock"
 defaults write com.apple.dock persistent-apps -array
 
-# Add applications to Dock (including blank spaces)
+_i "Add applications to Dock (including blank spaces)"
 for app in "${dock[@]}"
 do
     if [[ $app = space ]]; then
@@ -168,17 +157,34 @@ do
     fi
 done
 
-# Remove icons cache & kill Dock
+_i "Remove icons cache & kill Dock"
 sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \;
 sudo rm -rf /Library/Caches/com.apple.iconservices.store
 killall Dock
 
 ###############################################################
-@ "Reboot" 12
+@ "Un-sudo" 11
 ###############################################################
 
-# Stop Caffeinate (allow computer to sleep)
+_i "Stop sudo"
+sudo -k
+
+_i "Allow computer to sleep (caffeinate)"
 sudo killall caffeinate
+
+###############################################################
+@ "Oh My Zsh" 12
+###############################################################
+
+_ "Use the zsh installed by Homebrew"
+sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+
+_ "Install oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+###############################################################
+@ "Reboot" 13
+###############################################################
 
 _ "macOS Bootstrap installation has completed"
 

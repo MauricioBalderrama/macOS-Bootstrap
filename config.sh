@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Visual Studio Code Settings Gist Code 
+# d3df70c8e3492aa86d2bd7b64c37b8c0
+
 # github username
 gitHubUsername=MauricioBalderrama
 
@@ -55,6 +58,12 @@ fonts=(
 
 # casks
 casks=(
+    # servers & virtualization
+    xampp
+    # docker
+    # vagrant
+    # virtualbox
+
     #browsers
     google-chrome
     firefox
@@ -64,8 +73,8 @@ casks=(
     # code related
     visual-studio-code
     hyper
+    iterm2
     # sublime-text
-    # iterm2
 
     # utilities
     hyperdock
@@ -91,11 +100,6 @@ casks=(
     vlc
     spotify
 
-    # servers & virtualization
-    xampp
-    # docker
-    # vagrant
-    # virtualbox
 )
 
 # dock (`space` means a blank space in the dock)
@@ -121,11 +125,11 @@ dock=(
 
     Visual\ Studio\ Code
     Hyper
-    # iTerm
-    # Utilities/Terminal
+    iTerm
+    Utilities/Terminal
     space
 
-    FileZilla
+    # FileZilla
     SourceTree
     # Dropbox
     # Google\ Drive
