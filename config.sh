@@ -77,6 +77,7 @@ casks=(
     # sublime-text
 
     # utilities
+    duet
     hyperdock
     sketchup
     # filezilla # fails
