@@ -189,7 +189,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 _ "macOS Bootstrap installation has completed"
 
 @@ "Do you want to reboot now? (y/n)"
-exit
+
 # reboot
 `sudo fdesetup isactive`
 if [[ $? != 0 ]]; then

@@ -59,7 +59,7 @@ fonts=(
 # casks
 casks=(
     # servers & virtualization
-    xampp
+    mamp
     # docker
     # vagrant
     # virtualbox
@@ -68,13 +68,10 @@ casks=(
     google-chrome
     firefox
     tor-browser
-    homebrew/cask-versions/google-chrome-canary
 
     # code related
     visual-studio-code
     hyper
-    iterm2
-    # sublime-text
 
     # utilities
     hyperdock
@@ -91,6 +88,7 @@ casks=(
     skype
 
     # system hacks
+    spectacle
     appcleaner
     flux
     keepingyouawake
@@ -119,13 +117,11 @@ dock=(
     Tor\ Browser
     Firefox
     Safari
-    Google\ Chrome\ Canary
     Google\ Chrome
     space
 
     Visual\ Studio\ Code
     Hyper
-    iTerm
     Utilities/Terminal
     space
 
@@ -135,7 +131,8 @@ dock=(
     # Google\ Drive
     space
 
-    XAMPP/xamppfiles/manager-osx #xampp
+    MAMP/MAMP
+    # XAMPP/xamppfiles/manager-osx
     # Docker
     # Vagrant
     # VirtualBox
