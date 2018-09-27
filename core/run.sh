@@ -182,6 +182,15 @@ sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 _ "Install oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# force reload of your .zshrc
+source ~/.zshrc
+
+# Force rebuild `zcompdump`:
+rm -f ~/.zcompdump; compinit
+
+# zsh compinit: insecure directories warnings
+chmod go-w '/usr/local/share'
+
 ###############################################################
 @ "Reboot" 13
 ###############################################################

@@ -21,7 +21,6 @@ dotfilesGitHubRepositoryName=macOS-Dotfiles
 # formulas
 formulas=(
     bash
-    bash-completion
 
     zsh
     zsh-autosuggestions
@@ -37,16 +36,8 @@ formulas=(
     node
     python
 
-    aws-shell
-    awscli
-    
     git
     hub
-    git-crypt
-    colordiff
-
-    coreutils
-    findutils
 )
 
 #fonts
@@ -78,6 +69,7 @@ casks=(
     hyperdock
     sketchup
     # filezilla # fails
+    # transmit
     sourcetree
     qbittorrent
     # dropbox
@@ -98,7 +90,6 @@ casks=(
     # players
     vlc
     spotify
-
 )
 
 # dock (`space` means a blank space in the dock)
