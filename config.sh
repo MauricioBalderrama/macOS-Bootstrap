@@ -74,6 +74,7 @@ casks=(
     hyper
 
     # utilities
+    duet
     hyperdock
     sketchup
     # filezilla # fails
