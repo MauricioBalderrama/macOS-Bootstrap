@@ -124,6 +124,7 @@ dock=(
     Visual\ Studio\ Code
     Hyper
     Utilities/Terminal
+    Xcode
     space
 
     # FileZilla
