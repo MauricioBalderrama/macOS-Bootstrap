@@ -49,11 +49,11 @@ fonts=(
 
 # casks
 casks=(
-    # servers & virtualization
+    # local server
     mamp
-    # docker
-    # vagrant
-    # virtualbox
+    
+    # virtualization
+    virtualbox
 
     #browsers
     google-chrome
