@@ -14,6 +14,10 @@ bash <(curl -L https://raw.github.com/MauricioBalderrama/macOS-Bootstrap/master/
 ## Manual Installation
 Some apps I want to install by hand. For personal reasons.<br>
 <br>
+``` 
+# export HOMEBREW_CACHE=/Volumes/Homebrew
+``` 
+<br>
 **Adobe Creative Cloud** https://adobe.com/<br>
 *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Photoshop<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Illustrator<br>
