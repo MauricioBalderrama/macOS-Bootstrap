@@ -86,6 +86,7 @@ brew cask install ${fonts[@]}
 _i "Downloading Homebrew casks..."
 for cask in ${casks[@]}; do
     [[ ${cask} == 'spotify' ]] && continue
+    [[ ${cask} == 'hyperdock' ]] && continue    
     [[ ${cask} == 'homebrew/cask-versions/google-chrome-canary' ]] && continue
     _s "Downloading:  ${cask}"
     brew cask fetch ${cask}
