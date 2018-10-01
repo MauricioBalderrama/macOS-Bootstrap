@@ -10,7 +10,7 @@ gitHubUsername=MauricioBalderrama
 workFolder=Workspace
 
 # Set HOMEBREW_CACHE to use a different download and storage location
-homebrewCache=/Volumes/Installers/Homebrew
+homebrewCache=/Volumes/Homebrew
 
 # Mac configuration repository name at GitHub
 configurationGitHubRepositoryName=macOS-Hacks
