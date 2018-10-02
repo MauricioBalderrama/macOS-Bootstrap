@@ -49,6 +49,9 @@ fonts=(
 
 # casks
 casks=(
+    # office suite
+    libreoffice
+
     # local server
     mamp
     
