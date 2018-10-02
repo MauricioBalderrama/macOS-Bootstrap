@@ -56,7 +56,7 @@ casks=(
     mamp
     
     # virtualization
-    virtualbox
+    # virtualbox
 
     #browsers
     google-chrome
