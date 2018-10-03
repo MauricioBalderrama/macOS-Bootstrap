@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # macOS name
-declare macOSName="High Sierra"
+declare macOSName="Mojave"
 
 # macOS version
-declare macOSVersion="10.13"
+declare macOSVersion="10.14"
 
 # number of total steps for this script
-declare totalSteps=12
+declare totalSteps=15
 
 # colors
 declare black=$'\033[0;30m'
