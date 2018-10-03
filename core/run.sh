@@ -181,6 +181,9 @@ mv composer.phar /usr/local/bin/composer
 _i "Installing Laravel"
 composer global require "laravel/installer"
 
+_i "Creating sample Laravel application"
+laravel new laravel
+
 ###############################################################
 @ "Un-sudo" 13
 ###############################################################
