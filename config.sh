@@ -121,11 +121,13 @@ dock=(
     Xcode
     space
 
+    LibreOffice
+
     # FileZilla
     SourceTree
     # Dropbox
     # Google\ Drive
-    space
+    # space
 
     MAMP/MAMP
     # XAMPP/xamppfiles/manager-osx
