@@ -38,6 +38,7 @@ formulas=(
 
     git
     git-ftp
+    brotli
     hub
 )
 
