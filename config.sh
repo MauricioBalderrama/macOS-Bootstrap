@@ -37,6 +37,7 @@ formulas=(
     python
 
     git
+    git-ftp
     hub
 )
 
