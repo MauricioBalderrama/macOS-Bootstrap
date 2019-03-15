@@ -22,9 +22,10 @@ dotfilesGitHubRepositoryName=macOS-Dotfiles
 formulas=(
     bash
 
-    zsh
-    zsh-autosuggestions
-    zsh-completions
+    # consider removing zsh
+    # zsh
+    # zsh-autosuggestions
+    # zsh-completions
 
     cask
     
@@ -59,6 +60,7 @@ casks=(
     
     # virtualization
     # virtualbox
+    parallels
 
     #browsers
     google-chrome
@@ -73,7 +75,7 @@ casks=(
     duet
     hyperdock
     sketchup
-    # filezilla # fails
+    cyberduck
     # transmit
     sourcetree
     qbittorrent
@@ -90,11 +92,11 @@ casks=(
     appcleaner
     flux
     keepingyouawake
-    spotifree
+    # spotifree
 
     # players
     vlc
-    spotify
+    # spotify
 )
 
 # dock (`space` means a blank space in the dock)
@@ -102,43 +104,37 @@ dock=(
     Launchpad
     Siri
     System\ Preferences
-    App\ Store
-    Calendar
+    LibreOffice
+    # App\ Store
+    # Calendar
     space
 
     WhatsApp
-    TeamViewer
-    Skype
+    # TeamViewer
+    # Skype
     space
 
-    Tor\ Browser
-    Firefox
+    # Tor\ Browser
+    # Firefox
     Safari
     Google\ Chrome
     space
 
     Visual\ Studio\ Code
-    Hyper
-    Utilities/Terminal
-    Xcode
-    space
-
-    # FileZilla
+    # Hyper
+    # Utilities/Terminal
+    # Xcode
     SourceTree
+    Cyberduck
     # Dropbox
     # Google\ Drive
-    # space
-
-    LibreOffice
-    
     MAMP/MAMP
-    # XAMPP/xamppfiles/manager-osx
     # Docker
     # Vagrant
     # VirtualBox
     space
 
-    Spotify
+    # Spotify
     VLC
     qBittorrent    
 )
