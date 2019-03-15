@@ -34,7 +34,7 @@ export HOMEBREW_CACHE=/Volumes/Homebrew
 ## Credits
 
 ### Author
-**Brilliance Cloud** - [http://pull.studio/](http://pull.studio/)
+**Pull** - [http://pull.studio/](http://pull.studio/)
 
 ### License
 This project is licensed under the MIT License.
