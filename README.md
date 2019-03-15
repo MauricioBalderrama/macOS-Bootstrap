@@ -28,17 +28,13 @@ export HOMEBREW_CACHE=/Volumes/Homebrew
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Excel<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Power Point<br>*
 **Parallels Desktop** https://www.parallels.com/<br>
-**VM Ware Fusion** https://www.vmware.com/products/fusion.html<br>
-**~~Display Maid ($)~~** http://www.funk-isoft.com/display-maid.html<br>
-**Sketch** https://www.sketchapp.com/<br>
 **TextFinderX** https://sw.ixoft.com/texfinderx/<br>
-**Filezilla** (Error on Cask) https://filezilla-project.org/<br>
 **Transmit** https://panic.com//transmit/<br>
 
 ## Credits
 
 ### Author
-**Brilliance Cloud** - [http://brilliance.cloud/](http://brilliance.cloud/)
+**Brilliance Cloud** - [http://pull.studio/](http://pull.studio/)
 
 ### License
 This project is licensed under the MIT License.
