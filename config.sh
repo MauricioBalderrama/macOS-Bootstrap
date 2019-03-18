@@ -92,11 +92,12 @@ casks=(
     appcleaner
     flux
     keepingyouawake
-    # spotifree
-
+    symboliclinker
+    
     # players
     vlc
     # spotify
+    # spotifree
 )
 
 # dock (`space` means a blank space in the dock)
