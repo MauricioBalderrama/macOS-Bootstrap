@@ -10,7 +10,7 @@ gitHubUsername=MauricioBalderrama
 workFolder=Workspace
 
 # Set HOMEBREW_CACHE to use a different download and storage location
-homebrewCache=/Volumes/Homebrew
+homebrewCache=/Volumes/Installers
 
 # Mac configuration repository name at GitHub
 configurationGitHubRepositoryName=macOS-Hacks
@@ -59,8 +59,8 @@ casks=(
     mamp
     
     # virtualization
-    # virtualbox
-    parallels
+    virtualbox
+    # parallels
 
     #browsers
     google-chrome
@@ -69,7 +69,7 @@ casks=(
 
     # code related
     visual-studio-code
-    hyper
+    # hyper
 
     # utilities
     duet
@@ -117,12 +117,11 @@ dock=(
 
     # Tor\ Browser
     # Firefox
-    Safari
+    # Safari
     Google\ Chrome
     space
 
     Visual\ Studio\ Code
-    # Hyper
     # Utilities/Terminal
     # Xcode
     SourceTree
@@ -132,10 +131,10 @@ dock=(
     MAMP/MAMP
     # Docker
     # Vagrant
-    # VirtualBox
-    space
+    VirtualBox
+    # space
 
     # Spotify
-    VLC
-    qBittorrent    
+    # VLC
+    # qBittorrent    
 )
