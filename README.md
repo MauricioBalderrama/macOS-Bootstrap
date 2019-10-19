@@ -27,14 +27,12 @@ export HOMEBREW_CACHE=/Volumes/Installers
 *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Word<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Excel<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Power Point<br>*
-**Parallels Desktop** https://www.parallels.com/<br>
 **TextFinderX** https://sw.ixoft.com/texfinderx/<br>
-**Transmit** https://panic.com//transmit/<br>
 
 ## Credits
 
 ### Author
-**Pull** - [http://pull.studio/](http://pull.studio/)
+**Mauricio from Pull** - [http://pull.studio/](http://pull.studio/)
 
 ### License
 This project is licensed under the MIT License.
