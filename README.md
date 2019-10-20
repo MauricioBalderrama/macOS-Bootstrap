@@ -5,19 +5,24 @@ Everything I need after installing a fresh macOS.<br>
 Don’t blindly use it unless you know what that entails.<br>
 
 ## Prerequisites
-Install Command Line Tools (~200MB) from the Apple before running the script. Otherwise, Homebrew can't access the some libraries as the agreement hasn't been accepted yet. Download link: https://developer.apple.com/download/more/ 
+Install Command Line Tools (~200MB):<br>
+```
+xcode-select --install
+```
 
 ## Installation
+Run the installation script:
 ``` 
 bash <(curl -L https://raw.github.com/MauricioBalderrama/macOS-Bootstrap/master/install.sh)
 ```
+
 ## Other software installation
 
 ### Manual Homebrew installations 
 Use this command before installing anything from Homebrew (after the installation) to use a different download and storage location
 <br>
 ``` 
-export HOMEBREW_CACHE=/Volumes/Installers
+export HOMEBREW_CACHE=/Volumes/Installers/Homebrew
 ``` 
 ### Other non Homebrew installations 
 Some apps I want to install manually.<br>

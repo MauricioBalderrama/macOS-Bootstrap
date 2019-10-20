@@ -10,7 +10,7 @@ gitHubUsername=MauricioBalderrama
 workFolder=Workspace
 
 # Set HOMEBREW_CACHE to use a different download and storage location
-homebrewCache=/Volumes/Installers
+homebrewCache=/Volumes/Installers/Homebrew
 
 # System configuration repository name at GitHub
 configurationGitHubRepositoryName=macOS-Hacks
@@ -27,7 +27,7 @@ formulas=(
     curl
     wget
 
-    mackup
+    mackup # Keep your application settings in sync (OS X/Linux)
     
     node
     python

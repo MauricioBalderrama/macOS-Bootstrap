@@ -52,14 +52,7 @@ _i "Prevent computer from sleeping (caffeinate)"
 sudo caffeinate -d -i -m -s -u &
 
 ###############################################################
-@ "Command Line Tools" 3
-###############################################################
-
-_i "Installing Command Line Tools"
-sudo xcode-select --install
-
-###############################################################
-@ "Homebrew" 4
+@ "Homebrew" 3
 ###############################################################
 
 # install/update homebrew
@@ -103,7 +96,7 @@ for cask in ${casks[@]}; do
 done
 
 ###############################################################
-@ "Update" 5
+@ "Update" 4
 ###############################################################
 
 _i "Running macOS software updates..."
@@ -111,28 +104,28 @@ renew_sudo
 #sudo softwareupdate -i -a
 
 ###############################################################
-@ "System Configuration" 6
+@ "System Configuration" 5
 ###############################################################
 
 _i "Running system configuration (${configurationGitHubRepositoryName}) for macOS ${macOSName} ${macOSVersion}"
 bash <(curl -L https://raw.githubusercontent.com/${gitHubUsername}/${configurationGitHubRepositoryName}/master/install)
 
 ###############################################################
-@ "Dotfiles Configuration" 7
+@ "Dotfiles Configuration" 6
 ###############################################################
 
 _i "Running dotfiles configuration (${dotfilesGitHubRepositoryName})"
 bash <(curl -L https://raw.githubusercontent.com/${gitHubUsername}/${dotfilesGitHubRepositoryName}/master/install)
 
 ###############################################################
-@ "Apps Configuration" 8
+@ "Apps Configuration" 7
 ###############################################################
 
 _i "Running applications configuration"
 source . core/apps
 
 ###############################################################
-@ "Filesystem Configuration" 9
+@ "Filesystem Configuration" 8
 ###############################################################
 
 _i "Hide unused folders on ~"
@@ -143,7 +136,7 @@ sudo chflags hidden ~/Movies
 sudo chflags hidden ~/Music
 
 ###############################################################
-@ "Dock Configuration" 10
+@ "Dock Configuration" 9
 ###############################################################
 
 _i "Wipe all (default) app icons from the Dock"
@@ -167,7 +160,7 @@ sudo rm -rf /Library/Caches/com.apple.iconservices.store
 killall Dock
 
 ###############################################################
-@ "Composer" 11
+@ "Composer" 10
 ###############################################################
 
 _i "Installing composer"
@@ -185,7 +178,7 @@ php -r "unlink('composer-setup.php');"
 mv composer.phar /usr/local/bin/composer
 
 ###############################################################
-@ "Laravel" 12
+@ "Laravel" 11
 ###############################################################
 
 _i "Installing Laravel"
@@ -195,7 +188,7 @@ _i "Creating sample Laravel application"
 laravel new laravel
 
 ###############################################################
-@ "Un-sudo" 13
+@ "Un-sudo" 12
 ###############################################################
 
 _i "Stop sudo"
@@ -205,7 +198,7 @@ _i "Allow computer to sleep (caffeinate)"
 sudo killall caffeinate
 
 ###############################################################
-@ "Reboot" 14
+@ "Reboot" 13
 ###############################################################
 
 _ "macOS Bootstrap installation has completed"
