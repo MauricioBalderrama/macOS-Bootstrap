@@ -12,7 +12,7 @@ workFolder=Workspace
 # Set HOMEBREW_CACHE to use a different download and storage location
 homebrewCache=/Volumes/Installers
 
-# Mac configuration repository name at GitHub
+# System configuration repository name at GitHub
 configurationGitHubRepositoryName=macOS-Hacks
 
 # Dotfiles repository name at GitHub
@@ -21,11 +21,6 @@ dotfilesGitHubRepositoryName=macOS-Dotfiles
 # formulas
 formulas=(
     bash
-
-    # consider removing zsh
-    # zsh
-    # zsh-autosuggestions
-    # zsh-completions
 
     cask
     
@@ -56,57 +51,75 @@ casks=(
     libreoffice
 
     # local server
-    mamp
+    # mamp
     
     # virtualization
     virtualbox
     # parallels
 
-    #browsers
+    # browsers
     google-chrome
     firefox
     tor-browser
 
+    # database
+    psequel # PostgreSQL GUI
+    sequel-pro # MySQL & MariaDB GUI
+
     # code related
-    visual-studio-code
+    visual-studio-code # Source code editor
+    iterm2 # Terminal alternative
+    postman # Test REST APIs. Makes HTTP request
     # hyper
 
     # utilities
-    duet
-    hyperdock
-    sketchup
-    cyberduck
-    # transmit
-    sourcetree
-    qbittorrent
+    duet # Use a tablet of phone as display
+    hyperdock # window previews
+    sketchup # 3D modeling
+    cyberduck # FTP, SFTP, etc.
+    sourcetree # Git GUI
+    # qbittorrent # Torrent GUI
+    transmission # Torrent GUI
+    cakebrew # Homebrew GUI
     # dropbox
     # google-drive
 
     # chat & collaboration
-    whatsapp
-    teamviewer
-    skype
+    whatsapp # Whatsapp desktop app
+    teamviewer # Remote control
+    skype # Skype desktop app
 
     # system hacks
-    spectacle
-    appcleaner
-    flux
-    keepingyouawake
-    symboliclinker
+    spectacle # Arrange windows with keyboard shortcuts
+    appcleaner # Uninstall applications completely
+    flux # Changes the color temperature of your display adapt to the time of day
+    keepingyouawake # Prevents your Mac from entering sleep mode
+    symboliclinker # Allows users to make symbolic links in Finder
     
     # players
     vlc
     # spotify
     # spotifree
+
+    # preview for developers https://github.com/sindresorhus/quick-look-plugins
+    qlcolorcode 
+    qlstephen 
+    qlmarkdown 
+    quicklook-json 
+    qlimagesize 
+    suspicious-package 
+    quicklookase 
+    qlvideo
 )
 
 # dock (`space` means a blank space in the dock)
 dock=(
+    space
+
     Launchpad
     Siri
     System\ Preferences
     LibreOffice
-    # App\ Store
     # Calendar
     space
 
@@ -122,17 +135,20 @@ dock=(
     space
 
     Visual\ Studio\ Code
-    # Utilities/Terminal
-    # Xcode
+    space
+
+    iTerm
+    space
+
     SourceTree
     Cyberduck
     # Dropbox
     # Google\ Drive
-    MAMP/MAMP
+    # MAMP/MAMP
     # Docker
     # Vagrant
     VirtualBox
-    # space
+    space
 
     # Spotify
     # VLC

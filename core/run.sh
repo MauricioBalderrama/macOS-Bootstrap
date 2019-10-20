@@ -6,12 +6,8 @@
 . functions.sh
 
 ###############################################################
-@ "Xcode" 1
+@ "Confirm you want to proceed"
 ###############################################################
-
-_i "Xcode is ~5.3 Gb."
-_i "It is recommended you have it installed and updated."
-_i "Xcode can be downloaded from the AppStore or from: https://developer.apple.com/download/more/ "
 
 @@ "Do you want to continue? (Y/n)"
 read -r -n 1
@@ -20,7 +16,7 @@ if [[ $REPLY =~ ^[Nn]$ ]]; then
 fi
 
 ###############################################################
-@ "SSH" 2
+@ "SSH" 1
 ###############################################################
 
 # generate ssh key
@@ -38,7 +34,7 @@ open https://github.com/account/ssh
 read -r -n 1
 
 ###############################################################
-@ "Sudo" 3
+@ "Sudo" 2
 ###############################################################
 
 @@ "Please enter your admin password"
@@ -54,6 +50,13 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 _i "Prevent computer from sleeping (caffeinate)"
 sudo caffeinate -d -i -m -s -u &
+
+###############################################################
+@ "Command Line Tools" 3
+###############################################################
+
+_i "Installing Command Line Tools"
+sudo xcode-select --install
 
 ###############################################################
 @ "Homebrew" 4
@@ -126,7 +129,7 @@ bash <(curl -L https://raw.githubusercontent.com/${gitHubUsername}/${dotfilesGit
 ###############################################################
 
 _i "Running applications configuration"
-# source . core/apps
+source . core/apps
 
 ###############################################################
 @ "Filesystem Configuration" 9
@@ -168,8 +171,15 @@ killall Dock
 ###############################################################
 
 _i "Installing composer"
+EXPECTED_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig)
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('SHA384', 'composer-setup.php') === '93b54496392c062774670ac18b134c3b3a95e5a5e5c8f1a9f115f203b75bf9a129d5daa8ba6a13e2cc8a1da0806388a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+ACTUAL_SIGNATURE=$(php -r "echo hash_file('SHA384', 'composer-setup.php');")
+if [ "$EXPECTED_SIGNATURE" != "$ACTUAL_SIGNATURE" ]
+then
+    >&2 echo 'ERROR: Invalid installer signature'
+    rm composer-setup.php
+    exit 1
+fi
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
 mv composer.phar /usr/local/bin/composer

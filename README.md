@@ -14,7 +14,7 @@ bash <(curl -L https://raw.github.com/MauricioBalderrama/macOS-Bootstrap/master/
 ## Other software installation
 
 ### Manual Homebrew installations 
-Use this command before installing anything from Homebrew (after the installation) to target the local Installers volume.
+Use this command before installing anything from Homebrew (after the installation) to use a different download and storage location
 <br>
 ``` 
 export HOMEBREW_CACHE=/Volumes/Installers
