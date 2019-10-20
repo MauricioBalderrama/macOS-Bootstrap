@@ -11,13 +11,16 @@ Install Command Line Tools (~200MB) from the Apple before running the script. Ot
 ``` 
 bash <(curl -L https://raw.github.com/MauricioBalderrama/macOS-Bootstrap/master/install.sh)
 ```
-## Other software installation (manual)
-Use this command before installing anything from Homebrew to target the local volumne: Installers
+## Other software installation
+
+### Manual Homebrew installations 
+Use this command before installing anything from Homebrew (after the installation) to target the local Installers volume.
 <br>
 ``` 
 export HOMEBREW_CACHE=/Volumes/Installers
 ``` 
-Some apps I want to install by hand. For personal reasons.<br>
+### Other non Homebrew installations 
+Some apps I want to install manually.<br>
 <br>
 **Adobe Creative Cloud** https://adobe.com/<br>
 *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Photoshop<br>
