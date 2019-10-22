@@ -20,14 +20,16 @@ dotfilesGitHubRepositoryName=macOS-Dotfiles
 
 # formulas
 formulas=(
-    bash
+    # shells
+    bash # Default shell on mac
+    fish # Shell with autosuggestions and autocomplete by default
 
     cask
     
     curl
     wget
 
-    mackup # Keep your application settings in sync (OS X/Linux)
+    mackup # Keeps your application settings in sync
     
     node
     python

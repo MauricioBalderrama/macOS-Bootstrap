@@ -191,17 +191,24 @@ _i "Creating sample Laravel application"
 laravel new laravel
 
 ###############################################################
-@ "Un-sudo" 12
+@ "Shell upgrade to Fish" 12
 ###############################################################
 
-_i "Stop sudo"
-sudo -k
+_i "Add /usr/local/bin/fish to /etc/shells"
+cat /etc/shells|grep /usr/local/bin/fish || sudo sh -c 'echo "/usr/local/bin/fish" >> /etc/shells'
+
+_i "Add /usr/local/bin/fish to /etc/shells"
+sudo chsh -s /usr/local/bin/fish
+
+###############################################################
+@ "Allow computer to sleep" 13
+###############################################################
 
 _i "Allow computer to sleep (caffeinate)"
-sudo killall caffeinate
+killall caffeinate
 
 ###############################################################
-@ "Reboot" 13
+@ "Reboot" 14
 ###############################################################
 
 _ "macOS Bootstrap installation has completed"
