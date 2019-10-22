@@ -4,16 +4,15 @@
 # iTerm 2                                                                     #
 ###############################################################################
 
+# Don’t display the annoying prompt when quitting iTerm
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
 #########
 # Untested
 #########s
 
 # # Install the Solarized Dark theme for iTerm
 # #open "${HOME}/init/Solarized Dark.itermcolors"
-
-# # Don’t display the annoying prompt when quitting iTerm
-# defaults write com.googlecode.iterm2 PromptOnQuit -bool false
-
 
 ###############################################################################
 # Google Chrome & Google Chrome Canary                                        #
