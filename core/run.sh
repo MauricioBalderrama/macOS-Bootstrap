@@ -125,7 +125,7 @@ bash <(curl -L https://raw.githubusercontent.com/${gitHubUsername}/${dotfilesGit
 ###############################################################
 
 _i "Running applications configuration"
-source . core/apps
+source . core/apps.sh
 
 ###############################################################
 @ "Filesystem Configuration" 8
