@@ -163,7 +163,17 @@ sudo rm -rf /Library/Caches/com.apple.iconservices.store
 killall Dock
 
 ###############################################################
-@ "Composer" 10
+@ "Shell upgrade to Fish" 10
+###############################################################
+
+_i "Add /usr/local/bin/fish to /etc/shells"
+cat /etc/shells|grep /usr/local/bin/fish || sudo sh -c 'echo "/usr/local/bin/fish" >> /etc/shells'
+
+_i "Add /usr/local/bin/fish to /etc/shells"
+sudo chsh -s /usr/local/bin/fish
+
+###############################################################
+@ "Composer" 11
 ###############################################################
 
 _i "Installing composer"
@@ -181,24 +191,19 @@ php -r "unlink('composer-setup.php');"
 mv composer.phar /usr/local/bin/composer
 
 ###############################################################
-@ "Laravel" 11
+@ "Laravel" 12
 ###############################################################
 
-_i "Installing Laravel"
-composer global require "laravel/installer"
+# _i "Installing Laravel"
+# composer global require "laravel/installer"
 
-_i "Creating sample Laravel application"
+_i "Create PATH to Laravel for this instance"
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+echo $PATH
+
+_i "Creating sample Laravel application on ~"
+cd ~
 laravel new laravel
-
-###############################################################
-@ "Shell upgrade to Fish" 12
-###############################################################
-
-_i "Add /usr/local/bin/fish to /etc/shells"
-cat /etc/shells|grep /usr/local/bin/fish || sudo sh -c 'echo "/usr/local/bin/fish" >> /etc/shells'
-
-_i "Add /usr/local/bin/fish to /etc/shells"
-sudo chsh -s /usr/local/bin/fish
 
 ###############################################################
 @ "Allow computer to sleep" 13
