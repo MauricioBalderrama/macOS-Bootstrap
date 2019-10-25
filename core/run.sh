@@ -99,7 +99,7 @@ _i "Cleaning up ..."
 brew cleanup
 
 ###############################################################
-@ "Update" 4
+@ "Update Mac OS" 4
 ###############################################################
 
 _i "Running macOS software updates..."
@@ -128,15 +128,11 @@ _i "Running applications configuration"
 source . core/apps.sh
 
 ###############################################################
-@ "Filesystem Configuration" 8
+@ "Server Configuration" 8
 ###############################################################
 
-_i "Hide unused folders on ~"
-sudo chflags hidden ~/Pictures
-sudo chflags hidden ~/Public
-sudo chflags hidden ~/Applications
-sudo chflags hidden ~/Movies
-sudo chflags hidden ~/Music
+_i "Running applications configuration"
+source . core/server.sh
 
 ###############################################################
 @ "Dock Configuration" 9
@@ -163,17 +159,7 @@ sudo rm -rf /Library/Caches/com.apple.iconservices.store
 killall Dock
 
 ###############################################################
-@ "Shell upgrade to Fish" 10
-###############################################################
-
-_i "Add /usr/local/bin/fish to /etc/shells"
-cat /etc/shells|grep /usr/local/bin/fish || sudo sh -c 'echo "/usr/local/bin/fish" >> /etc/shells'
-
-_i "Add /usr/local/bin/fish to /etc/shells"
-sudo chsh -s /usr/local/bin/fish
-
-###############################################################
-@ "Composer" 11
+@ "Composer" 10
 ###############################################################
 
 _i "Installing composer"
@@ -190,12 +176,15 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 mv composer.phar /usr/local/bin/composer
 
+_i "Add bin to PATH"
+echo 'export PATH="$HOME/.composer/vendor/bin:$PATH" # Composer bin' >> ~/.profile && . ~/.profile
+
 ###############################################################
-@ "Laravel" 12
+@ "Laravel" 11
 ###############################################################
 
-# _i "Installing Laravel"
-# composer global require "laravel/installer"
+_i "Installing Laravel"
+composer global require "laravel/installer"
 
 _i "Create PATH to Laravel for this instance"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
@@ -206,15 +195,21 @@ cd ~
 laravel new laravel
 
 ###############################################################
-@ "Allow computer to sleep" 13
+@ "Shell upgrade to Fish" 13
 ###############################################################
 
-_i "Allow computer to sleep (caffeinate)"
-killall caffeinate
+_i "Add /usr/local/bin/fish to /etc/shells"
+cat /etc/shells|grep /usr/local/bin/fish || sudo sh -c 'echo "/usr/local/bin/fish" >> /etc/shells'
+
+_i "Add /usr/local/bin/fish to /etc/shells"
+sudo chsh -s /usr/local/bin/fish
 
 ###############################################################
 @ "Reboot" 14
 ###############################################################
+
+_i "Allow computer to sleep (caffeinate)"
+killall caffeinate
 
 _ "macOS Bootstrap installation has completed"
 

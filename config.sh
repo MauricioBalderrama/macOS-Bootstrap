@@ -30,7 +30,7 @@ formulas=(
     wget
 
     mackup # Keeps your application settings in sync
-    
+
     node
     python
 
@@ -130,13 +130,13 @@ dock=(
     # Skype
     space
 
+    Visual\ Studio\ Code
+    space
+
     # Tor\ Browser
     # Firefox
     # Safari
     Google\ Chrome
-    space
-
-    Visual\ Studio\ Code
     space
 
     iTerm
