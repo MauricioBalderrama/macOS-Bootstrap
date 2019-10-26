@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # libs
-. ../config.sh
-. settings.sh
-. functions.sh
+source ../config.sh
+source ./settings.sh
+source ./functions.sh
 
 ###############################################################
 @ "Confirm you want to proceed"
