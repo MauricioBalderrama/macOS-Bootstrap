@@ -63,7 +63,7 @@ else
     _i "Updating Homebrew..."
     brew update --verbose
 	brew upgrade
-	brew prune
+	brew cleanup
 fi
 
 _i "Set Hombrew cache location: ${homebrewCache}..."
@@ -76,7 +76,7 @@ _i "Installing Homebrew formulas..."
 brew install ${formulas[@]}
 
 _i "Installing Homebrew fonts..."
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 brew cask install ${fonts[@]}
 
 _i "Downloading Homebrew casks..."
