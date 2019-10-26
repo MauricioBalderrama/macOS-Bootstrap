@@ -14,6 +14,9 @@ sudo chown root:wheel /Library/LaunchDaemons/homebrew.mxcl.nginx.plist
 # Change port from 8080 to 80
 sed -i '' 's/listen       8080/listen       80/g' /usr/local/etc/nginx/nginx.conf
 
+# Add servers folder
+mkdir /usr/local/etc/nginx/servers
+
 # Start server
 sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.nginx.plist
 
@@ -74,3 +77,39 @@ echo 'export PATH="/usr/local/sbin:$PATH" # PHP bin' >> ~/.profile && . ~/.profi
 
 # Configure auto-start on system boot
 mkdir -p ~/Library/LaunchAgentscd
+ln -sfv /usr/local/opt/php\@5.6/homebrew.mxcl.php\@5.6.plist ~/Library/LaunchAgents/
+ln -sfv /usr/local/opt/php\@7.2/homebrew.mxcl.php\@7.2.plist ~/Library/LaunchAgents/
+launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php\@5.6.plist
+launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php\@7.2.plist
+
+# Review configuration
+lsof -Pni4 | grep LISTEN | grep php
+
+###############################################################################
+# Laravel config (Nginx)
+###############################################################################
+
+# Create server block
+cp ./laravel.conf /usr/local/etc/nginx/servers/laravel.conf
+
+# Reload Nginx
+sudo nginx -s reload
+
+###############################################################################
+# MariaDB
+###############################################################################
+
+# Install
+brew install mariadb
+
+# Configure auto-start
+ln -sfv /usr/local/opt/mariadb/homebrew.mxcl.mariadb.plist ~/Library/LaunchAgents
+
+# Launch service
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mariadb.plist
+
+# Secure installation
+mysql_secure_installation
+
+#Verify
+sudo lsof -PiTCP -sTCP:LISTEN | grep mysqld

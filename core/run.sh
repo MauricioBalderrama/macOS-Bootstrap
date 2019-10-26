@@ -99,43 +99,7 @@ _i "Cleaning up ..."
 brew cleanup
 
 ###############################################################
-@ "Update Mac OS" 4
-###############################################################
-
-_i "Running macOS software updates..."
-renew_sudo
-#sudo softwareupdate -i -a
-
-###############################################################
-@ "System Configuration" 5
-###############################################################
-
-_i "Running system configuration (${configurationGitHubRepositoryName}) for macOS ${macOSName} ${macOSVersion}"
-bash <(curl -L https://raw.githubusercontent.com/${gitHubUsername}/${configurationGitHubRepositoryName}/master/install)
-
-###############################################################
-@ "Dotfiles Configuration" 6
-###############################################################
-
-_i "Running dotfiles configuration (${dotfilesGitHubRepositoryName})"
-bash <(curl -L https://raw.githubusercontent.com/${gitHubUsername}/${dotfilesGitHubRepositoryName}/master/install)
-
-###############################################################
-@ "Apps Configuration" 7
-###############################################################
-
-_i "Running applications configuration"
-source . core/apps.sh
-
-###############################################################
-@ "Server Configuration" 8
-###############################################################
-
-_i "Running applications configuration"
-source . core/server.sh
-
-###############################################################
-@ "Dock Configuration" 9
+@ "Dock Configuration" 4
 ###############################################################
 
 _i "Wipe all (default) app icons from the Dock"
@@ -159,7 +123,36 @@ sudo rm -rf /Library/Caches/com.apple.iconservices.store
 killall Dock
 
 ###############################################################
-@ "Composer" 10
+@ "Update Mac OS" 5
+###############################################################
+
+_i "Running macOS software updates..."
+renew_sudo
+#sudo softwareupdate -i -a
+
+###############################################################
+@ "System Configuration" 6
+###############################################################
+
+_i "Running system configuration (${configurationGitHubRepositoryName}) for macOS ${macOSName} ${macOSVersion}"
+bash <(curl -L https://raw.githubusercontent.com/${gitHubUsername}/${configurationGitHubRepositoryName}/master/install)
+
+###############################################################
+@ "Dotfiles Configuration" 7
+###############################################################
+
+_i "Running dotfiles configuration (${dotfilesGitHubRepositoryName})"
+bash <(curl -L https://raw.githubusercontent.com/${gitHubUsername}/${dotfilesGitHubRepositoryName}/master/install)
+
+###############################################################
+@ "Apps Configuration" 8
+###############################################################
+
+_i "Running applications configuration"
+source ./apps.sh
+
+###############################################################
+@ "Composer" 9
 ###############################################################
 
 _i "Installing composer"
@@ -180,22 +173,14 @@ _i "Add bin to PATH"
 echo 'export PATH="$HOME/.composer/vendor/bin:$PATH" # Composer bin' >> ~/.profile && . ~/.profile
 
 ###############################################################
-@ "Laravel" 11
+@ "Server Configuration" 10
 ###############################################################
 
-_i "Installing Laravel"
-composer global require "laravel/installer"
-
-_i "Create PATH to Laravel for this instance"
-export PATH="$HOME/.composer/vendor/bin:$PATH"
-echo $PATH
-
-_i "Creating sample Laravel application on ~"
-cd ~
-laravel new laravel
+_i "Running applications configuration"
+source ./server.sh
 
 ###############################################################
-@ "Shell upgrade to Fish" 13
+@ "Shell upgrade to Fish" 11
 ###############################################################
 
 _i "Add /usr/local/bin/fish to /etc/shells"
@@ -205,7 +190,7 @@ _i "Add /usr/local/bin/fish to /etc/shells"
 sudo chsh -s /usr/local/bin/fish
 
 ###############################################################
-@ "Reboot" 14
+@ "Reboot" 12
 ###############################################################
 
 _i "Allow computer to sleep (caffeinate)"
