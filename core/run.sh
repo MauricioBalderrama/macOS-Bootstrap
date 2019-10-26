@@ -95,7 +95,10 @@ for cask in ${casks[@]}; do
     brew cask install  ${cask}
 done
 
-_i "Cleaning up ..."
+_i "Re-install outdated casks"
+brew cask reinstall `brew cask outdated`
+
+_i "Removing old versions (cleanup)... "
 brew cleanup
 
 ###############################################################
