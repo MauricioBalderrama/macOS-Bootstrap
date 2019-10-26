@@ -7,7 +7,7 @@ declare macOSName="Mojave"
 declare macOSVersion="10.14.6"
 
 # number of total steps for this script
-declare totalSteps=14
+declare totalSteps=12
 
 # colors
 declare black=$'\033[0;30m'
