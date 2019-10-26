@@ -1,5 +1,5 @@
 # macOS Bootstrap
-Everything I need after installing a fresh macOS.<br>
+Everything I need after installing a fresh macOS Mojave.<br>
 <br>
 **Warning:** If you want to give these script a try, you should first **fork this repository, review and understand the code**.<br>
 Don’t blindly use it unless you know what that entails.<br>
