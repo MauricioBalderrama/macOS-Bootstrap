@@ -175,6 +175,9 @@ mv composer.phar /usr/local/bin/composer
 _i "Add bin to PATH"
 echo 'export PATH="$HOME/.composer/vendor/bin:$PATH" # Composer bin' >> ~/.profile && . ~/.profile
 
+_i "Add Laravel installer"
+composer global require "laravel/installer"
+
 ###############################################################
 @ "Server Configuration" 10
 ###############################################################
