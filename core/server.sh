@@ -109,7 +109,7 @@ ln -sfv /usr/local/opt/mariadb/homebrew.mxcl.mariadb.plist ~/Library/LaunchAgent
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mariadb.plist
 
 # Secure installation
-mysql_secure_installation
+sudo mysql_secure_installation
 
 #Verify
 sudo lsof -PiTCP -sTCP:LISTEN | grep mysqld

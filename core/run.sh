@@ -187,7 +187,7 @@ _i "Add /usr/local/bin/fish to /etc/shells"
 cat /etc/shells|grep /usr/local/bin/fish || sudo sh -c 'echo "/usr/local/bin/fish" >> /etc/shells'
 
 _i "Add /usr/local/bin/fish to /etc/shells"
-sudo chsh -s /usr/local/bin/fish
+chsh -s /usr/local/bin/fish
 
 ###############################################################
 @ "Reboot" 12
