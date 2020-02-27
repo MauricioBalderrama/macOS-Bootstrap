@@ -51,10 +51,7 @@ fonts=(
 casks=(
     # office suite
     libreoffice
-
-    # local server
-    # mamp
-    
+   
     # virtualization
     virtualbox
     # parallels
@@ -72,7 +69,6 @@ casks=(
     visual-studio-code # Source code editor
     iterm2 # Terminal alternative
     postman # Test REST APIs. Makes HTTP request
-    # hyper
 
     # utilities
     duet # Use a tablet of phone as display
@@ -88,7 +84,8 @@ casks=(
 
     # chat & collaboration
     whatsapp # Whatsapp desktop app
-    teamviewer # Remote control
+    teamviewer # Remote control [consider removing]
+    anydesk # Remote control
     skype # Skype desktop app
 
     # system hacks
