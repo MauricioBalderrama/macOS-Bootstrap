@@ -78,9 +78,9 @@ echo 'export PATH="/usr/local/sbin:$PATH" # PHP bin' >> ~/.profile && . ~/.profi
 # Configure auto-start on system boot
 mkdir -p ~/Library/LaunchAgentscd
 ln -sfv /usr/local/opt/php\@5.6/homebrew.mxcl.php\@5.6.plist ~/Library/LaunchAgents/
-ln -sfv /usr/local/opt/php\@7.4/homebrew.mxcl.php\@7.4.plist ~/Library/LaunchAgents/
+ln -sfv /usr/local/opt/php/homebrew.mxcl.php.plist ~/Library/LaunchAgents/
 launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php\@5.6.plist
-launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php\@7.4.plist
+launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php.plist
 
 # Review configuration
 lsof -Pni4 | grep LISTEN | grep php
