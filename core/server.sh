@@ -59,14 +59,14 @@ brew install php@5.6
 sed -i '' 's/listen = 127.0.0.1:9000/listen = 127.0.0.1:9056/g' /usr/local/etc/php/5.6/php-fpm.conf
 
 ###############################################################################
-# PHP 7.2
+# PHP 7.4
 ###############################################################################
 
 # Install
-brew install php@7.2 
+brew install php
 
-# Listen on port 9072
-sed -i '' 's/listen = 127.0.0.1:9000/listen = 127.0.0.1:9072/g' /usr/local/etc/php/7.2/php-fpm.d/www.conf
+# Listen on port 9074
+sed -i '' 's/listen = 127.0.0.1:9000/listen = 127.0.0.1:9074/g' /usr/local/etc/php/7.4/php-fpm.d/www.conf
 
 ###############################################################################
 # PHP (general)
@@ -78,9 +78,9 @@ echo 'export PATH="/usr/local/sbin:$PATH" # PHP bin' >> ~/.profile && . ~/.profi
 # Configure auto-start on system boot
 mkdir -p ~/Library/LaunchAgentscd
 ln -sfv /usr/local/opt/php\@5.6/homebrew.mxcl.php\@5.6.plist ~/Library/LaunchAgents/
-ln -sfv /usr/local/opt/php\@7.2/homebrew.mxcl.php\@7.2.plist ~/Library/LaunchAgents/
+ln -sfv /usr/local/opt/php\@7.4/homebrew.mxcl.php\@7.4.plist ~/Library/LaunchAgents/
 launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php\@5.6.plist
-launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php\@7.2.plist
+launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php\@7.4.plist
 
 # Review configuration
 lsof -Pni4 | grep LISTEN | grep php
@@ -90,7 +90,7 @@ lsof -Pni4 | grep LISTEN | grep php
 ###############################################################################
 
 # Create server block
-cp ./laravel.conf /usr/local/etc/nginx/servers/laravel.conf
+cp ./laravel.conf /usr/local/etc/nginx/servers/laravel
 
 # Reload Nginx
 sudo nginx -s reload
