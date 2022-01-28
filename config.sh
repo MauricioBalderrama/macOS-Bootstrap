@@ -67,7 +67,6 @@ casks=(
 
     # utilities
     duet # Use a tablet of phone as display
-    hyperdock # window previews
     sketchup # 3D modeling
     cyberduck # FTP, SFTP, etc.
     sourcetree # Git GUI
