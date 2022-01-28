@@ -49,13 +49,6 @@ fonts=(
 
 # casks
 casks=(
-    # office suite
-    libreoffice
-   
-    # virtualization
-    virtualbox
-    # parallels
-
     # browsers
     google-chrome
     firefox
@@ -76,7 +69,6 @@ casks=(
     sketchup # 3D modeling
     cyberduck # FTP, SFTP, etc.
     sourcetree # Git GUI
-    # qbittorrent # Torrent GUI
     transmission # Torrent GUI
     cakebrew # Homebrew GUI
     # dropbox
@@ -84,9 +76,7 @@ casks=(
 
     # chat & collaboration
     whatsapp # Whatsapp desktop app
-    teamviewer # Remote control [consider removing]
     anydesk # Remote control
-    skype # Skype desktop app
 
     # system hacks
     spectacle # Arrange windows with keyboard shortcuts
@@ -100,7 +90,7 @@ casks=(
     # spotify
     # spotifree
 
-    # preview for developers https://github.com/sindresorhus/quick-look-plugins
+    # preview files (space bar preview) for developers https://github.com/sindresorhus/quick-look-plugins
     qlcolorcode 
     qlstephen 
     qlmarkdown 
@@ -118,21 +108,14 @@ dock=(
     Launchpad
     Siri
     System\ Preferences
-    LibreOffice
-    # Calendar
     space
 
     WhatsApp
-    # TeamViewer
-    # Skype
     space
 
     Visual\ Studio\ Code
     space
 
-    # Tor\ Browser
-    # Firefox
-    # Safari
     Google\ Chrome
     space
 
@@ -146,7 +129,7 @@ dock=(
     # MAMP/MAMP
     # Docker
     # Vagrant
-    VirtualBox
+    # VirtualBox
     space
 
     # Spotify
