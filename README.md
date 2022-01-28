@@ -1,11 +1,11 @@
 # macOS Bootstrap
-Everything I need after installing a fresh macOS Big Sur.<br>
-<br>
-**Warning:** If you want to give these script a try, you should first **fork this repository, review and understand the code**.<br>
-Don’t blindly use it unless you know what that entails.<br>
+Everything I need after installing a fresh macOS Big Sur.
+
+**Warning:** If you want to give these script a try, you should first **fork this repository, review and understand the code**.
+Don’t blindly use it unless you know what that entails.
 
 ## Prerequisites
-Install Command Line Tools (~200MB):<br>
+Install Command Line Tools (~4GB):
 ```
 xcode-select --install
 ```
@@ -18,25 +18,23 @@ bash <(curl -L https://raw.github.com/MauricioBalderrama/macOS-Bootstrap/master/
 
 ## Other software installation
 
-### Manual Homebrew installations 
-Use this command before installing anything from Homebrew (after the installation) to use a different download and storage location
-<br>
-``` 
-export HOMEBREW_CACHE=/Volumes/Installers/Homebrew
-``` 
+### Homebrew
+If possible, use Homebrew to install other software.
+
 ### Other non Homebrew installations 
-Some apps I want to install manually.<br>
-<br>
-**Adobe Creative Cloud** https://adobe.com/<br>
-*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Photoshop<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Illustrator<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Acrobat Reader<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Acrobat<br>*
-**Microsoft Office** https://www.office.com/<br>
-*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Word<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Excel<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Power Point<br>*
-**TextFinderX** https://sw.ixoft.com/texfinderx/<br>
+Some apps I want to install manually.
+
+**Adobe Creative Cloud** https://adobe.com/
+*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Photoshop
+*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lightroom
+*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Premiere
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Illustrator
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Acrobat
+**Microsoft Office** https://www.office.com/
+*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Word
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Excel
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Power Point*
+**TextFinderX** https://sw.ixoft.com/texfinderx/
 
 ## Credits
 
