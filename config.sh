@@ -123,7 +123,7 @@ dock=(
     iTerm
     space
 
-    SourceTree
+    Sourcetree
     Cyberduck
     # Dropbox
     # Google\ Drive
