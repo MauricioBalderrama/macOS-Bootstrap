@@ -55,7 +55,7 @@ casks=(
     tor-browser
 
     # database
-    psequel # PostgreSQL GUI
+    # psequel-pro # PostgreSQL GUI
     sequel-pro # MySQL & MariaDB GUI
 
     # code related
