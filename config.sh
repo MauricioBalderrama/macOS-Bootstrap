@@ -38,6 +38,8 @@ formulas=(
     git-ftp
     brotli
     hub
+    
+    svn # For fonts
 )
 
 #fonts
