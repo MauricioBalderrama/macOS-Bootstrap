@@ -77,7 +77,7 @@ brew install ${formulas[@]}
 
 _i "Installing Homebrew fonts..."
 brew tap homebrew/cask-fonts
-brew cask install ${fonts[@]}
+brew install cask ${fonts[@]}
 
 _i "Downloading Homebrew casks..."
 for cask in ${casks[@]}; do
@@ -92,7 +92,7 @@ _i "Installing Homebrew casks..."
 for cask in ${casks[@]}; do
 	renew_sudo
     _s "Installing:  ${cask}"
-    brew cask install  ${cask}
+    brew install cask ${cask}
 done
 
 _i "Re-install outdated casks"
@@ -179,11 +179,11 @@ _i "Add Laravel installer"
 composer global require "laravel/installer"
 
 ###############################################################
-@ "Server Configuration" 10
+#@ "Server Configuration" 10
 ###############################################################
 
-_i "Running applications configuration"
-source ./server.sh
+#_i "Running applications configuration"
+#source ./server.sh
 
 ###############################################################
 @ "Shell upgrade to Fish" 11
