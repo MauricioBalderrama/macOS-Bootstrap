@@ -107,7 +107,7 @@ dock=(
     space
 
     Launchpad
-    Siri
+    # Siri
     System\ Preferences
     space
 
