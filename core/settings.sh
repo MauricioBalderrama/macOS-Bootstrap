@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # macOS name
-declare macOSName="Big Sur"
+declare macOSName="Big Monterrey"
 
 # macOS version
 declare macOSVersion="11.6.2"
