@@ -59,6 +59,8 @@ sudo caffeinate -d -i -m -s -u &
 if test ! $(which brew); then
     _i "Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/icebear/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"    
 else
     _i "Updating Homebrew..."
     brew update --verbose
