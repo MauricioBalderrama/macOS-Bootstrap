@@ -25,11 +25,11 @@ If possible, use Homebrew to install other software.
 Some apps I want to install manually.
 
 **Adobe Creative Cloud** https://adobe.com/
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Photoshop
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lightroom
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Premiere
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Illustrator
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Acrobat
+* Photoshop
+* Lightroom
+* Premiere
+* Illustrator
+* Acrobat
 **Microsoft Office** https://www.office.com/
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Word
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Excel
