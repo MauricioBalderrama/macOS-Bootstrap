@@ -4,7 +4,7 @@
 declare macOSName="Big Monterrey"
 
 # macOS version
-declare macOSVersion="11.6.2"
+declare macOSVersion="12.3"
 
 # number of total steps for this script
 declare totalSteps=12
