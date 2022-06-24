@@ -63,8 +63,9 @@ if test ! $(which brew); then
     NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
-    sleep 3
+    sleep 10
     exec zsh -l
+    sleep 10
 else
     _i "Updating Homebrew..."
     brew update --verbose
