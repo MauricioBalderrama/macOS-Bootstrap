@@ -30,10 +30,12 @@ Some apps I want to install manually.
 * Premiere
 * Illustrator
 * Acrobat
+
 **Microsoft Office** https://www.office.com/
 * Word
 * Excel
 * Power Point
+
 **TextFinderX** https://sw.ixoft.com/texfinderx/
 
 ## Credits
