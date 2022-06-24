@@ -31,9 +31,9 @@ Some apps I want to install manually.
 * Illustrator
 * Acrobat
 **Microsoft Office** https://www.office.com/
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Word
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Excel
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Power Point
+* Word
+* Excel
+* Power Point
 **TextFinderX** https://sw.ixoft.com/texfinderx/
 
 ## Credits
