@@ -58,16 +58,16 @@ sudo caffeinate -d -i -m -s -u &
 # install/update homebrew
 if test ! $(which brew); then
     _i "Installing Homebrew..."
-    # NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    # ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+    # echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+    # eval "$(/opt/homebrew/bin/brew shellenv)"
     # exec zsh -l
 else
     _i "Updating Homebrew..."
     brew update --verbose
-	brew upgrade
-	brew cleanup
+    brew upgrade
+    brew cleanup
 fi
 
 _i "Set Hombrew cache location: ${homebrewCache}..."
