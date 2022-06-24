@@ -62,6 +62,7 @@ if test ! $(which brew); then
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
     exec bash -l
+    exec zsh -l
 else
     _i "Updating Homebrew..."
     brew update --verbose
