@@ -44,24 +44,50 @@ formulas=(
 
 #fonts
 fonts=(
-    font-fira-code
-    font-roboto
     font-clear-sans
+    font-open-sans
+    font-noto-sans
+    font-roboto 
+    font-roboto-mono
+    font-roboto-sla
+    font-montserrat
+    font-lato
+    font-fira-code
+    font-source-code-pro
+    font-source-sans-pro
+    font-raleway
+    font-oswald
+    font-poppins
+    font-merriweather
+    font-pt-sans
+    font-ubuntu
+    font-cuprum
+    font-oxygen
+    font-redhat
+    font-space-mono
+    font-monoid
+    font-milonga
+    font-anton
+    font-3270
+    font-abel
+    font-montserrat
+    font-playfair-display    
 )
 
 # casks
 casks=(
     # browsers
     google-chrome
-    firefox
     tor-browser
 
     # database
     # psequel-pro # PostgreSQL GUI
     sequel-pro # MySQL & MariaDB GUI
 
-    # code related
+    # development related
     visual-studio-code # Source code editor
+    sourcetree # Git GUI
+    figma # Design and prototyping
     iterm2 # Terminal alternative
     postman # Test REST APIs. Makes HTTP request
 
@@ -69,27 +95,25 @@ casks=(
     duet # Use a tablet of phone as display
     sketchup # 3D modeling
     cyberduck # FTP, SFTP, etc.
-    sourcetree # Git GUI
     transmission # Torrent GUI
     cakebrew # Homebrew GUI
+    google-drive # File storage GUI
     # dropbox
-    # google-drive
 
     # chat & collaboration
     whatsapp # Whatsapp desktop app
     anydesk # Remote control
+    zoom
 
     # system hacks
-    spectacle # Arrange windows with keyboard shortcuts
+    moom # Arrange windows with keyboard shortcuts
     appcleaner # Uninstall applications completely
     flux # Changes the color temperature of your display adapt to the time of day
     keepingyouawake # Prevents your Mac from entering sleep mode
     symboliclinker # Allows users to make symbolic links in Finder
     
     # players
-    vlc
-    # spotify
-    # spotifree
+    iina
 
     # preview files (space bar preview) for developers https://github.com/sindresorhus/quick-look-plugins
     qlcolorcode 
@@ -115,19 +139,18 @@ dock=(
     space
 
     Visual\ Studio\ Code
+    iTerm
+    Figma
+    Sequel\ Pro
     space
 
     Google\ Chrome
     space
 
-    iTerm
-    space
-
-    Sourcetree
     Cyberduck
+    Sourcetree
+    Google\ Drive
     # Dropbox
-    # Google\ Drive
-    # MAMP/MAMP
     # Docker
     # Vagrant
     # VirtualBox
