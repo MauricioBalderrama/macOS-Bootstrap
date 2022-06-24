@@ -65,7 +65,7 @@ if test ! $(which brew); then
     eval "$(/opt/homebrew/bin/brew shellenv)"
     # NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     # sleep 10
-    # exec zsh -l
+    nohup zsh -l
     # sleep 10
 else
     _i "Updating Homebrew..."
