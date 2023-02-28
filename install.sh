@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # variables
-declare cloneFolder=/Volumes/Projects/macOS-Bootstrap
+declare cloneFolder=~/macOS-Bootstrap
 declare gitHubUsername=MauricioBalderrama
 declare gitHubRepository=macOS-Bootstrap
 
