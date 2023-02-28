@@ -129,11 +129,11 @@ sudo rm -rf /Library/Caches/com.apple.iconservices.store
 killall Dock
 
 ###############################################################
-@ "Update Mac OS" 5
+#@ "Update Mac OS" 5
 ###############################################################
 
-_i "Running macOS software updates..."
-renew_sudo
+#_i "Running macOS software updates..."
+#renew_sudo
 #sudo softwareupdate -i -a
 
 ###############################################################
