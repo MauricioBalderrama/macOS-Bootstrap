@@ -41,7 +41,7 @@ Some apps I want to install manually.
 ## Credits
 
 ### Author
-**Mauricio from Pull** - [http://pull.studio/](http://pull.studio/)
+**Mauricio B from PULL** - [http://pull.studio/](http://pull.studio/)
 
 ### License
 This project is licensed under the MIT License.
