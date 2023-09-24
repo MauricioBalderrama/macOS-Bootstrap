@@ -7,10 +7,10 @@
 gitHubUsername=MauricioBalderrama
 
 # work folder
-workFolder=Workspace
+workFolder=~
 
 # Set HOMEBREW_CACHE to use a different download and storage location
-homebrewCache=~/Installers/Homebrew
+homebrewCache=~/Homebrew-Installers
 
 # System configuration repository name at GitHub
 configurationGitHubRepositoryName=macOS-Hacks
@@ -82,7 +82,7 @@ casks=(
 
     # database
     # psequel-pro # PostgreSQL GUI
-    sequel-pro # MySQL & MariaDB GUI
+    sequel-ace # MySQL & MariaDB GUI
 
     # development related
     visual-studio-code # Source code editor
@@ -130,7 +130,6 @@ dock=(
     space
 
     Launchpad
-    # Siri
     System\ Preferences
     space
 
@@ -140,7 +139,7 @@ dock=(
     Visual\ Studio\ Code
     iTerm
     Figma
-    Sequel\ Pro
+    Sequel\ Ace
     space
 
     Google\ Chrome
@@ -149,13 +148,5 @@ dock=(
     Cyberduck
     Sourcetree
     Google\ Drive
-    # Dropbox
-    # Docker
-    # Vagrant
-    # VirtualBox
-    space
-
-    # Spotify
-    # VLC
-    # qBittorrent    
+    space 
 )
