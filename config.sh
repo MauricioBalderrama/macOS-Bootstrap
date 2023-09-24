@@ -90,6 +90,9 @@ casks=(
     figma # Design and prototyping
     iterm2 # Terminal alternative
     postman # Test REST APIs. Makes HTTP request
+    php@8.1 # php 8.1
+    php # php
+    brew-php-switcher # Change PHP version
 
     # utilities
     duet # Use a tablet of phone as display
