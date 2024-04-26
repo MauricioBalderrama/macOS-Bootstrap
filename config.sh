@@ -21,8 +21,7 @@ dotfilesGitHubRepositoryName=macOS-Dotfiles
 # formulas
 formulas=(
     # shells
-    bash # Default shell on mac
-    fish # Shell with autosuggestions and autocomplete by default
+    zsh # Default shell on mac
 
     cask
     
@@ -81,7 +80,6 @@ casks=(
     tor-browser
 
     # database
-    # psequel-pro # PostgreSQL GUI
     sequel-ace # MySQL & MariaDB GUI
 
     # development related
@@ -90,22 +88,21 @@ casks=(
     figma # Design and prototyping
     iterm2 # Terminal alternative
     postman # Test REST APIs. Makes HTTP request
-    php@8.1 # php 8.1
+    # php@8.1 # php 8.1
+    # php@8.2 # php 8.2
     php # php
     brew-php-switcher # Change PHP version
 
     # utilities
-    duet # Use a tablet of phone as display
+    # duet # Use a tablet of phone as display
     cyberduck # FTP, SFTP, etc.
     transmission # Torrent GUI
     cakebrew # Homebrew GUI
     google-drive # File storage GUI
-    # dropbox
 
     # chat & collaboration
     whatsapp # Whatsapp desktop app
     anydesk # Remote control
-    zoom
 
     # system hacks
     moom # Arrange windows with keyboard shortcuts
