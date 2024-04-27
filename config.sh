@@ -114,7 +114,7 @@ casks=(
     iina
 
     # preview files (space bar preview) for developers https://github.com/sindresorhus/quick-look-plugins
-    jpc-qlcolorcode
+    qlcolorcode
     qlstephen 
     qlmarkdown 
     quicklook-json 
