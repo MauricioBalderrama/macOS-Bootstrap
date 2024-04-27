@@ -39,6 +39,7 @@ formulas=(
     # php@8.2 # php 8.2
     php # php
     brew-php-switcher # Change PHP version    
+    composer # PHP package manager
     
     svn # For fonts
 )
