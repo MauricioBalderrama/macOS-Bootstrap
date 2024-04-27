@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # macOS name
-declare macOSName="Big Monterrey"
+declare macOSName="Sonoma"
 
 # macOS version
-declare macOSVersion="12.3"
+declare macOSVersion="14.4"
 
 # number of total steps for this script
-declare totalSteps=12
+declare totalSteps=10
 
 # colors
 declare black=$'\033[0;30m'
