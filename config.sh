@@ -9,9 +9,6 @@ gitHubUsername=MauricioBalderrama
 # work folder
 workFolder=~
 
-# Set HOMEBREW_CACHE to use a different download and storage location
-homebrewCache=~/Homebrew-Installers
-
 # System configuration repository name at GitHub
 configurationGitHubRepositoryName=macOS-Hacks
 
