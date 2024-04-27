@@ -128,7 +128,7 @@ dock=(
     space
 
     Launchpad
-    System\ Preferences
+    System\ Settings
     space
 
     WhatsApp
