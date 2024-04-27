@@ -69,9 +69,6 @@ else
     brew cleanup
 fi
 
-_i "Set Hombrew cache location: ${homebrewCache}..."
-export HOMEBREW_CACHE=${homebrewCache}
-
 _i "Homebrew is set to not update"
 export HOMEBREW_NO_AUTO_UPDATE=1
 
