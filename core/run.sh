@@ -159,7 +159,7 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 ###############################################################
 
 _i "Install oh my zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+bash <(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)
 
 ###############################################################
 @ "Reboot" 10
