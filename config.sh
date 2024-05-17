@@ -99,7 +99,7 @@ casks=(
     google-drive # File storage GUI
 
     # chat & collaboration
-    whatsapp # Whatsapp desktop app
+    whatsapp@legacy # Whatsapp LEGACY desktop app (better than current one, won't replace the old school smiley face)
     anydesk # Remote control
 
     # system hacks
