@@ -31,9 +31,8 @@ formulas=(
     python
 
     git
-    git-ftp
-    brotli
-    hub
+    brotli # Compression algorithm that compresses data using a combination of a modern variant of the LZ77 algorithm
+    hub # Extension to command-line git that helps you do everyday GitHub tasks - https://hub.github.com/
 
     # php@8.1 # php 8.1
     # php@8.2 # php 8.2
@@ -94,7 +93,7 @@ casks=(
 
     # utilities
     # duet # Use a tablet of phone as display
-    cyberduck # FTP, SFTP, etc.
+    # cyberduck # FTP, SFTP, etc.
     transmission # Torrent GUI
     cakebrew # Homebrew GUI
     google-drive # File storage GUI
@@ -144,7 +143,7 @@ dock=(
     Google\ Chrome
     space
 
-    Cyberduck
+    Transmission
     Sourcetree
     Google\ Drive
     space 
